@@ -117,8 +117,8 @@ public class UserProfile {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public LocalDateTime setCreatedAt(LocalDateTime createdAt) {
+        return this.createdAt = createdAt;
     }
 
     @Override

@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface UserProfileRepository {
 
-    public UserProfile create(UserProfile userProfile);
+    public UserProfile findById(int userId);
 
-    public List<UserProfile> findById(int userId);
-
-    public List<UserProfile> findByUsername(String username);
+    public UserProfile findByUsername(String username);
 
     public UserProfile findByEmail(String email);
+
+    public UserProfile create(UserProfile userProfile);
 
     public boolean update(UserProfile userProfile);
 
