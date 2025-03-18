@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Video } from "lucide-react";
-// h-screen justify-center items-center mx-auto
+
 function HeaderOne() {
 	return (
 		<header className="justify-center items-center mx-auto border-b text-white">
