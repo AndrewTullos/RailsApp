@@ -92,6 +92,8 @@ public class UserProfileJdbcClientRepository implements UserProfileRepository {
 
     @Override
     public UserProfile create(UserProfile userProfile) {
+        LocalDateTime currentTime = LocalDateTime.now();
+        userProfile.setCreatedAt(currentTime);
         final String sql = """
                 INSERT INTO `user_profile` (
                     username,
@@ -129,7 +131,7 @@ public class UserProfileJdbcClientRepository implements UserProfileRepository {
                 .param("city", userProfile.getCity())
                 .param("state", userProfile.getState())
                 .param("postal_code", userProfile.getPostalCode())
-                .param("created_at", userProfile.setCreatedAt(LocalDateTime.now()))
+                .param("created_at", userProfile.setCreatedAt(currentTime))
                 .update(keyHolder, "id");
 
         if (rowsAffected <= 0) {

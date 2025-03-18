@@ -32,7 +32,7 @@ public class UserProfileService {
         Result<UserProfile> result = new Result<>();
         UserProfile userProfile = userProfileRepository.findByUsername(username);
         if (userProfile == null) {
-            result.addErrorMessage("Username not found", ResultType.NOT_FOUND);
+            result.addErrorMessage("Username or password incorrect / found", ResultType.NOT_FOUND);
         } else {
             result.setPayload(userProfile);
         }
@@ -58,10 +58,14 @@ public class UserProfileService {
         if (!result.isSuccess()) {
             return result;
         }
+        if (result.isSuccess()) {
+            String hashedPassword = BCrypt.withDefaults().hashToString(BCRYPT_COST, userProfile.getPassword().toCharArray());
 
-        userProfile = userProfileRepository.create(userProfile);
-        result.setPayload(userProfile);
-        System.out.println("Payload" + result.getPayload());
+            userProfile.setPassword(hashedPassword);
+            UserProfile createdUser = userProfileRepository.create(userProfile);
+            result.setPayload(createdUser);
+        }
+
         return result;
 
     }
@@ -123,15 +127,6 @@ public class UserProfileService {
 
         if (userProfile.getPassword() == null || userProfile.getPassword().isBlank()) {
             result.addErrorMessage("Password cannot be blank.", ResultType.INVALID);
-        }
-
-
-        if (result.isSuccess()) {
-            String hashedPassword = BCrypt.withDefaults().hashToString(BCRYPT_COST, userProfile.getPassword().toCharArray());
-
-            userProfile.setPassword(hashedPassword);
-            UserProfile createdUser = userProfileRepository.create(userProfile);
-            result.setPayload(createdUser);
         }
 
         return result;

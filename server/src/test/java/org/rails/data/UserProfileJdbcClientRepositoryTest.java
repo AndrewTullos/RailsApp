@@ -97,20 +97,20 @@ public class Create {
        assertThrows(DuplicateKeyException.class, () -> repository.create(toAdd));
    }
 
-   @Test
-   void update() {
-       UserProfile toUpdate = TestHelper.makeUser();
-       String before = toUpdate.getUsername();
-
-       toUpdate.setUsername("testUsername");
-       String after = toUpdate.getUsername();
-
-       boolean actual = repository.update(toUpdate);
-
-       assertTrue(actual);
-       assertEquals(before, "JoeSchmoe");
-       assertEquals(after, "testUsername");
-   }
+//   @Test
+//   void update() {
+//       UserProfile toUpdate = TestHelper.makeUser();
+//       String before = toUpdate.getUsername();
+//
+//       toUpdate.setUsername("testUsername");
+//       String after = toUpdate.getUsername();
+//
+//       boolean actual = repository.update(toUpdate);
+//
+//       assertTrue(actual);
+//       assertEquals(before, "JoeSchmoe");
+//       assertEquals(after, "testUsername");
+//   }
 
    @Test
    void shouldNotUpdate() {

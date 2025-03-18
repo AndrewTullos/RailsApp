@@ -19,7 +19,7 @@ public class UserProfile {
     public UserProfile() {
     }
 
-    public UserProfile(int userId, String username, String email, String password, String profilePicture, String firstName, String lastName, String city, String state, String postalCode, LocalDateTime createdAt) {
+    public UserProfile(int userId, String username, String email, String password, String profilePicture, String firstName, String lastName, String city, String state, String postalCode) {
         this.userId = userId;
         this.username = username;
         this.email = email;
@@ -30,7 +30,6 @@ public class UserProfile {
         this.city = city;
         this.state = state;
         this.postalCode = postalCode;
-        this.createdAt = createdAt;
     }
 
     public int getUserId() {

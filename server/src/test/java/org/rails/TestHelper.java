@@ -8,6 +8,6 @@ import static java.time.LocalTime.now;
 
 public class TestHelper {
     public static UserProfile makeUser() {
-        return new UserProfile(1,"JoeSchmoe", "joeschmoe@test.com", "testPassword1!", "testprofile1URL.com", "Joe", "Schmoe", "San Francisco", "CA", "94105", LocalDateTime.now());
+        return new UserProfile(1,"JoeSchmoe", "joeschmoe@test.com", "testPassword1!", "testprofile1URL.com", "Joe", "Schmoe", "San Francisco", "CA", "94105");
     }
 }
