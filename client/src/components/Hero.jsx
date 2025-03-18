@@ -19,7 +19,7 @@ function Hero() {
 					</p>
 					<div className="mt-10 flex flex-col sm:flex-row gap-4">
 						<Link href="/signup">
-							<Button size="lg" className="gap-2">
+							<Button size="lg" className="gap-2 bg-indigo-600">
 								Get Started <ArrowRight className="h-4 w-4" />
 							</Button>
 						</Link>

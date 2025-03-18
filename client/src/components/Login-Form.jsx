@@ -1,3 +1,8 @@
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,39 +15,91 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-export function LoginForm({ className, ...props }) {
+export function LoginForm({
+	className,
+	loggedInUser,
+	setLoggedInUser,
+	...props
+}) {
+	const navigate = useNavigate();
+
+	const [user, setUser] = useState({
+		username: "",
+		password: "",
+	});
+
+	const [errors, setErrors] = useState([]);
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		fetch("http://localhost:8080/api/user/login", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(user),
+		}).then((response) => {
+			if (response.status >= 200 && response.status < 300) {
+				response.json().then((fetchedUser) => {
+					const user = jwtDecode(fetchedUser.jwt);
+					user.jwt = fetchedUser.jwt;
+					setLoggedInUser(user);
+					localStorage.setItem("loggedInUser", JSON.stringify(user));
+					navigate("/dashboard");
+				});
+			} else {
+				response.json().then((fetchedErrors) => setErrors(fetchedErrors));
+			}
+		});
+	};
+
+	const handleChange = (event) => {
+		setUser({ ...user, [event.target.name]: event.target.value });
+	};
+
 	return (
 		<div className={cn("flex flex-col gap-6", className)} {...props}>
 			<Card>
 				<CardHeader>
 					<CardTitle className="text-2xl">Login</CardTitle>
 					<CardDescription>
-						Enter your email below to login to your account
+						Enter your username below to login to your account
 					</CardDescription>
 				</CardHeader>
 				<CardContent>
-					<form>
+					<form onSubmit={handleSubmit}>
 						<div className="flex flex-col gap-6">
 							<div className="grid gap-2">
-								<Label htmlFor="email">Email</Label>
+								<Label htmlFor="username">Username</Label>
 								<Input
-									id="email"
-									type="email"
-									placeholder="m@example.com"
+									id="username"
+									name="username"
+									type="username"
+									value={user.username}
+									placeholder="Enter your username..."
+									onChange={handleChange}
 									required
 								/>
 							</div>
 							<div className="grid gap-2">
 								<div className="flex items-center">
 									<Label htmlFor="password">Password</Label>
-									<a
+									<Link
 										href="#"
 										className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
 									>
 										Forgot your password?
-									</a>
+									</Link>
 								</div>
-								<Input id="password" type="password" required />
+								<Input
+									id="password"
+									name="password"
+									type="password"
+									value={user.password}
+									onChange={handleChange}
+									required
+								/>
 							</div>
 							<Button type="submit" className="w-full">
 								Login
@@ -53,9 +110,9 @@ export function LoginForm({ className, ...props }) {
 						</div>
 						<div className="mt-4 text-center text-sm">
 							Don&apos;t have an account?{" "}
-							<a href="#" className="underline underline-offset-4">
+							<Link to="/signup" className="underline underline-offset-4">
 								Sign up
-							</a>
+							</Link>
 						</div>
 					</form>
 				</CardContent>

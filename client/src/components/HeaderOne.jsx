@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Video } from "lucide-react";
-
+// h-screen justify-center items-center mx-auto
 function HeaderOne() {
 	return (
-		<header className="border-b text-white">
+		<header className="justify-center items-center mx-auto border-b text-white">
 			<div className="container flex items-center justify-between py-4">
 				<Link to={"/"} className="flex items-center gap-2">
 					<Video className="h-6 w-6" />
