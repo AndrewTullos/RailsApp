@@ -125,11 +125,6 @@ public class UserProfileService {
             result.addErrorMessage("Password cannot be blank.", ResultType.INVALID);
         }
 
-//        // password complexity
-//        if (!userProfile.getPassword().matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[#?!@$%^&*\\-]).{8,}$")) {
-//            result.addErrorMessage("Password does not meet complexity requirements.", ResultType.INVALID);
-//        }
-
 
         if (result.isSuccess()) {
             String hashedPassword = BCrypt.withDefaults().hashToString(BCRYPT_COST, userProfile.getPassword().toCharArray());
