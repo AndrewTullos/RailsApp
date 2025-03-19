@@ -154,8 +154,7 @@ public class UserProfileJdbcClientRepository implements UserProfileRepository {
                     last_name = :last_name,
                     city = :city,
                     state = :state,
-                    postal_code = :postal_code,
-                    created_at = :created_at
+                    postal_code = :postal_code
                 WHERE id = :user_id;
                 """;
 
@@ -170,7 +169,6 @@ public class UserProfileJdbcClientRepository implements UserProfileRepository {
                 .param("city", userProfile.getCity())
                 .param("state", userProfile.getState())
                 .param("postal_code", userProfile.getPostalCode())
-                .param("created_at", userProfile.getCreatedAt())
                 .update() > 0;
     }
 

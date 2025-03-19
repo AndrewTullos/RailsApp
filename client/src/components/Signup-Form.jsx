@@ -64,9 +64,9 @@ export function SignupForm({
 			{...props}
 		>
 			<div className="flex flex-col items-center gap-2 text-center">
-				<h1 className="text-2xl font-bold">Login to your account</h1>
+				<h1 className="text-2xl font-bold">Register your account</h1>
 				<p className="text-balance text-sm text-muted-foreground">
-					Enter your email below to login to your account
+					Enter your email below to register your account
 				</p>
 			</div>
 			<div className="grid gap-6">
@@ -136,8 +136,10 @@ export function SignupForm({
 					<Label htmlFor="postalCode">Zipcode</Label>
 					<Input
 						id="postalCode"
+						name="postalCode"
 						type="postalCode"
 						placeholder="11111"
+						value={user.postalCode}
 						onChange={handleChange}
 						required
 					/>
@@ -147,7 +149,9 @@ export function SignupForm({
 					<Label htmlFor="email">Email</Label>
 					<Input
 						id="email"
+						name="email"
 						type="email"
+						value={user.email}
 						placeholder="m@example.com"
 						onChange={handleChange}
 						required
@@ -161,6 +165,8 @@ export function SignupForm({
 					<Input
 						id="password"
 						type="password"
+						name="password"
+						value={user.password}
 						onChange={handleChange}
 						required
 					/>

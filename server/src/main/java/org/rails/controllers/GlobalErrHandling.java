@@ -33,9 +33,9 @@ public class GlobalErrHandling {
     public ResponseEntity<String> handleBadSqlGrammar(SQLSyntaxErrorException ex) {
         return new ResponseEntity<String>("Bad SQL Grammar, check your code buddy", HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handleException(Exception ex) {
-        return new ResponseEntity<String>("Something went wrong on our end :(", HttpStatus.I_AM_A_TEAPOT);
-    }
+//
+//    @ExceptionHandler(Exception.class)
+//    public ResponseEntity<String> handleException(Exception ex) {
+//        return new ResponseEntity<String>("Something went wrong on our end :(", HttpStatus.I_AM_A_TEAPOT);
+//    }
 }

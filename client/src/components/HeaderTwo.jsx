@@ -48,7 +48,9 @@ function HeaderTwo({ loggedInUser, setLoggedInUser }) {
 					</Button>
 					<Button variant="default" size="sm" className="gap-1 bg-indigo-700">
 						<Plus className="h-4 w-4" />
-						<span className="hidden sm:inline">New Clip</span>
+						<Link to={"/upload"}>
+							<span className="hidden sm:inline">New Clip</span>
+						</Link>
 					</Button>
 
 					<DropdownMenu>
