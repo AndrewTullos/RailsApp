@@ -6,6 +6,8 @@ import NotFoundPage from "./pages/NotFoundPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import DashboardPage from "./pages/DashboardPage";
+import UploadClipPage from "./pages/UploadClipPage";
+
 import Footer from "./components/Footer";
 import StarsCanvas from "./components/StarBackground";
 
@@ -58,6 +60,15 @@ function App() {
 						}
 					/>
 
+					<Route
+						path="/upload"
+						element={
+							<UploadClipPage
+								loggedInUser={loggedInUser}
+								setLoggedInUser={setLoggedInUser}
+							/>
+						}
+					/>
 					<Route path="/*" element={<NotFoundPage />} />
 				</Routes>
 				<Footer />
