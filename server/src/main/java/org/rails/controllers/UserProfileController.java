@@ -1,6 +1,8 @@
 package org.rails.controllers;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import org.rails.domain.Result;
 import org.rails.domain.ResultType;
@@ -45,6 +47,19 @@ public class UserProfileController {
         }
     }
 
+//    @PostMapping("/create")
+//    public ResponseEntity<Object> create(@RequestBody UserProfile user) {
+//        Result<UserProfile> userResult = service.create(user);
+//
+//        if (userResult.getResultType() == ResultType.INVALID) {
+//            return new ResponseEntity<>(userResult.getErrorMessages(), HttpStatus.CONFLICT);
+//        }
+//
+//        Map<String, String> jwtMap = createJwtFromUser(userResult.getPayload());
+//        return new ResponseEntity<>(jwtMap, HttpStatus.OK);
+//
+//    }
+
     @PostMapping("/login")
     public ResponseEntity<Object> login(@RequestBody UserProfile user) {
         Result<UserProfile> userResult = service.findByUsername(user.getUsername());
@@ -53,15 +68,11 @@ public class UserProfileController {
             return new ResponseEntity<>(userResult.getErrorMessages(), HttpStatus.NOT_FOUND);
         }
 
-//        if (userResult.getPayload().getPassword().equals(user.getPassword())) {
-
-
         char[] proposedPassword = user.getPassword().toCharArray();
         char[] existingPassword = userResult.getPayload().getPassword().toCharArray();
 
         if (BCrypt.verifyer().verify(proposedPassword, existingPassword).verified) {
 
-//            return new ResponseEntity<>(userResult.getPayload(), HttpStatus.OK);
             Map<String, String> jwtMap = createJwtFromUser(userResult.getPayload());
             return new ResponseEntity<>(jwtMap, HttpStatus.OK);
         } else {
@@ -78,7 +89,6 @@ public class UserProfileController {
             return new ResponseEntity<>(result.getErrorMessages(), HttpStatus.BAD_REQUEST);
         }
     }
-
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteById(@PathVariable int id) {
@@ -100,4 +110,18 @@ public class UserProfileController {
         return output;
     }
 
+    private Integer getUserIdFromHeaders(Map<String, String> headers) {
+        if (headers.get("authorization") == null) {
+            return null;
+        }
+
+        try {
+            Jws<Claims> claims = Jwts.parserBuilder()
+                    .setSigningKey(secretSigningKey.getKey())
+                    .build().parseClaimsJws(headers.get("authorization"));
+            return (Integer) claims.getBody().get("userId");
+        } catch (Exception e) {
+            return null;
+        }
+    }
 }
