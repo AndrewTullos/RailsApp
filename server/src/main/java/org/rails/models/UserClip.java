@@ -13,12 +13,11 @@ public class UserClip {
     public UserClip() {
     }
 
-    public UserClip(int clipId, UserProfile userProfile, String mediaUrl, String caption, LocalDateTime createdAt) {
+    public UserClip(int clipId, UserProfile userProfile, String mediaUrl, String caption) {
         this.clipId = clipId;
         this.userProfile = userProfile;
         this.mediaUrl = mediaUrl;
         this.caption = caption;
-        this.createdAt = createdAt;
     }
 
     public int getClipId() {

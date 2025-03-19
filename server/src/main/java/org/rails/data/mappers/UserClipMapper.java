@@ -1,6 +1,5 @@
-package org.rails.data;
+package org.rails.data.mappers;
 
-import org.rails.data.mappers.UserProfileMapper;
 import org.rails.models.UserClip;
 import org.rails.models.UserProfile;
 import org.springframework.jdbc.core.RowMapper;

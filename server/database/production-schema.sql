@@ -2,6 +2,10 @@ drop database if exists rails_app_db;
 create database rails_app_db;
 use rails_app_db;
 
+
+-- Followers: These are the people who follow you. They’ve subscribed to see your content.
+-- Followees: These are the people you follow. You’ve subscribed to see their content.
+
 CREATE TABLE IF NOT EXISTS `user_profile` (
 	`id` int AUTO_INCREMENT NOT NULL UNIQUE,
 	`username` varchar(100) NOT NULL,

@@ -8,9 +8,9 @@ public interface UserClipRepository {
 
     public UserClip findById(int clipId);
 
-    public List<UserClip> findAllByUserId(int userId);
+    public List<UserClip> findAllClipsByUserId(int userId);
 
-    public List<UserClip> findAllByFollowees(int userId);
+    public List<UserClip> findAllClipsByFollowees(int userId);
 
     public List<UserClip> findRecentClips();
 
