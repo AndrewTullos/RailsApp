@@ -6,6 +6,8 @@ import NotFoundPage from "./pages/NotFoundPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import DashboardPage from "./pages/DashboardPage";
+import Footer from "./components/Footer";
+import StarsCanvas from "./components/StarBackground";
 
 function App() {
 	const [loggedInUser, setLoggedInUser] = useState(null);
@@ -24,7 +26,7 @@ function App() {
 	}
 
 	return (
-		<div>
+		<div className="min-h-screen w-full">
 			<Router>
 				<Routes>
 					<Route path="/" element={<LandingPage />} />
@@ -37,10 +39,28 @@ function App() {
 							/>
 						}
 					/>
-					<Route path="/dashboard" element={<DashboardPage />} />
-					<Route path="/signup" element={<SignupPage />} />
+					<Route
+						path="/signup"
+						element={
+							<SignupPage
+								loggedInUser={loggedInUser}
+								setLoggedInUser={setLoggedInUser}
+							/>
+						}
+					/>
+					<Route
+						path="/dashboard"
+						element={
+							<DashboardPage
+								loggedInUser={loggedInUser}
+								setLoggedInUser={setLoggedInUser}
+							/>
+						}
+					/>
+
 					<Route path="/*" element={<NotFoundPage />} />
 				</Routes>
+				<Footer />
 			</Router>
 		</div>
 	);

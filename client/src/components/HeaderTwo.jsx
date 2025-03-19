@@ -23,10 +23,10 @@ import { Input } from "@/components/ui/input";
 
 import { SignOut } from "./SignOut";
 
-function HeaderTwo() {
+function HeaderTwo({ loggedInUser, setLoggedInUser }) {
 	return (
-		<header className="sticky top-0 z-10 border-b bg-primary text-white">
-			<div className="container flex h-14 items-center">
+		<header className="w-full sticky top-0 z-10 border-b bg-primary text-white">
+			<div className="container mx-auto flex h-14 items-center">
 				<Link to="/dashboard" className="flex items-center gap-2 font-semibold">
 					<Video className="h-6 w-6" />
 					<span className="text-xl font-bold">Rails App</span>

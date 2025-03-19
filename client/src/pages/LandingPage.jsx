@@ -11,15 +11,14 @@ import {
 	NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 
-// import { Hero } from "@/components/Hero";
+// 			<main className="grid min-h-full place-items-center bg-transparent px-6 py-24 sm:py-32 lg:px-8">
 
 function LandingPage() {
 	return (
-		<>
+		<div className="min-h-screen w-full flex flex-col items-center justify-center">
 			<HeaderOne />
 			<Hero />
-			<Footer />
-		</>
+		</div>
 	);
 }
 

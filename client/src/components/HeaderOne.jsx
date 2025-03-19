@@ -5,8 +5,9 @@ import { Video } from "lucide-react";
 
 function HeaderOne() {
 	return (
-		<header className="justify-center items-center mx-auto border-b text-white">
-			<div className="container flex items-center justify-between py-4">
+		<header className="w-full border-b text-white">
+			<div className="container mx-auto flex items-center justify-between py-4">
+				{/* Left: Logo */}
 				<Link to={"/"} className="flex items-center gap-2">
 					<Video className="h-6 w-6" />
 					<span className="text-xl font-bold">Rails App</span>
@@ -30,7 +31,7 @@ function HeaderOne() {
 						Login
 					</Link>
 					<Link to="/signup">
-						<Button>Sign Up</Button>
+						<Button className="rounded-md bg-indigo-600">Sign Up</Button>
 					</Link>
 				</div>
 			</div>

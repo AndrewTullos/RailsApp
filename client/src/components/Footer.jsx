@@ -4,14 +4,14 @@ import { Video } from "lucide-react";
 
 function Footer() {
 	return (
-		<footer className="border-t py-8 bg-white/10">
-			<div className="container">
+		<footer className="border-t py-8 bg-primary">
+			<div className="container mx-auto px-4">
 				<div className="flex flex-col md:flex-row justify-between items-center gap-4">
-					<div className="flex items-center gap-2">
+					<div className="flex gap-2">
 						<Video className="stroke-white h-5 w-5" />
 						<span className=" text-white font-bold">Rails App</span>
 					</div>
-					<div className="flex gap-6">
+					<div className="flex items-center gap-6">
 						<Link href="#" className="text-sm text-gray-300 hover:underline">
 							Terms
 						</Link>
