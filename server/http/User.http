@@ -11,7 +11,7 @@ Content-Type: application/json
 {
     "userId": 1,
     "username": "JohnDoe",
-    "email": "johndoe@Test44.com",
+    "email": "JohnDoe@Test44.com",
     "password": "Password44!",
     "profilePicture": null,
     "firstName": "John",
@@ -29,7 +29,7 @@ Content-Type: application/json
 {
     "userId": 1,
     "username": "JohnDoe",
-    "email": "johndoe@Test44.com",
+    "email": "JohnDoe@Test44.com",
     "password": "Password44!",
     "profilePicture": "testprofile1URL.com",
     "firstName": "John",
@@ -47,7 +47,7 @@ Content-Type: application/json
 {
     "userId": 1,
     "username": "",
-    "email": "johndoe@Test44.com",
+    "email": "JohnDoe@Test44.com",
     "password": "Password44!",
     "profilePicture": "testprofile1URL.com",
     "firstName": "John",
@@ -65,7 +65,7 @@ Content-Type: application/json
 {
     "userId": 1,
     "username": "testtesttest",
-    "email": "johndoe@Testnew.com",
+    "email": "JohnDoe@Test44.com",
     "password": "",
     "profilePicture": "testprofile1URL.com",
     "firstName": "John",
@@ -83,7 +83,7 @@ Content-Type: application/json
 {
     "userId": 1,
     "username": "JohnDoe2",
-    "email": "johndoe@Test2.com",
+    "email": "JohnDoe@Test44.com",
     "password": "password",
     "profilePicture": "testprofile1URL.com",
     "firstName": "John",
@@ -135,7 +135,7 @@ Authorization:
 {
     "userId": 1,
     "username": "JohnDoe2",
-    "email": "johndoe@Test2.com",
+    "email": "JohnDoe@Test44.com",
     "password": "Password44!",
     "profilePicture": "testprofile1URL.com",
     "firstName": "John",

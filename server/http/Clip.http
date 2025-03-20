@@ -1,0 +1,28 @@
+@url = http://localhost:8080/api/clip
+
+###
+GET {{url}}/1 HTTP/1.1
+
+###
+# happy path
+POST {{url}}
+Content-Type: application/json
+
+{
+    "clipId": 1,
+    "userProfile": {
+            "userId": 1,
+            "username": "JohnDoe",
+            "email": "johndoe@Test44.com",
+            "password": "Password44!",
+            "profilePicture": null,
+            "firstName": "John",
+            "lastName": "Doe",
+            "city": "New York",
+            "state": "NY",
+            "postalCode": "10001",
+            "createdAt": "2025-03-19T19:48:38"
+        },
+    "mediaUrl": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+    "caption": "Gangnam Style"
+}

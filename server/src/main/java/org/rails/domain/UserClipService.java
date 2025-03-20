@@ -1,7 +1,9 @@
 package org.rails.domain;
 
 import org.rails.data.UserClipRepository;
+import org.rails.data.UserProfileRepository;
 import org.rails.models.UserClip;
+import org.rails.models.UserProfile;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +13,11 @@ public class UserClipService {
 
     private final UserClipRepository userClipRepository;
 
-    public UserClipService(UserClipRepository userClipRepository) {
+    private final UserProfileRepository userProfileRepository;
+
+    public UserClipService(UserClipRepository userClipRepository, UserProfileRepository userProfileRepository) {
         this.userClipRepository = userClipRepository;
+        this.userProfileRepository = userProfileRepository;
     }
 
     public Result<UserClip> findById(int id) {
@@ -48,14 +53,16 @@ public class UserClipService {
         return result;
     }
 
-    public Result<UserClip> create(UserClip userClip) {
-        Result<UserClip> result = validate(userClip);
+    public Result<UserClip> create(UserClip clip) {
+        UserProfile userProfile = userProfileRepository.findById(clip.getUserProfile().getUserId());
+
+        Result<UserClip> result = validate(clip);
         if (!result.isSuccess()) {
             return result;
         }
 
-        userClip = userClipRepository.create(userClip);
-        result.setPayload(userClip);
+        clip = userClipRepository.create(clip);
+        result.setPayload(clip);
         return result;
     }
 
