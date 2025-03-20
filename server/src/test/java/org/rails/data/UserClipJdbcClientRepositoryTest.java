@@ -57,19 +57,48 @@ class UserClipJdbcClientRepositoryTest {
         assertEquals(2, actual.size());
     }
 
+    // Todo: Implement test
     @Test
     void findRecentClips() {
+
     }
 
     @Test
     void create() {
+        UserClip clipToAdd = new UserClip();
+        clipToAdd.setClipId(1);
+        clipToAdd.setUserProfile(TestHelper.makeUser());
+        clipToAdd.setMediaUrl("testClip1URL.com");
+        clipToAdd.setCaption("Skateboard");
+
+        UserClip actual = repository.create(clipToAdd);
+
+        UserClip expected = TestHelper.makeClip();
+
+        assertNotNull(actual);
+        assertNotNull(actual.getClipId());
+        assertEquals(clipToAdd.getUserProfile(), actual.getUserProfile());
+        assertEquals("testClip1URL.com", actual.getMediaUrl());
+        assertEquals("Skateboard", actual.getCaption());
     }
 
+    // Todo: Implement test
     @Test
     void update() {
     }
 
     @Test
     void deleteById() {
+        UserClip clip = new UserClip();
+        clip.setUserProfile(TestHelper.makeUser());
+        clip.setMediaUrl("testClipURL.com");
+        clip.setCaption("Test Clip");
+        UserClip createdClip = repository.create(clip);
+
+        boolean actual = repository.deleteById(createdClip.getClipId());
+
+        assertTrue(actual, "Delete should return true on successful deletion");
+        UserClip deleted = repository.findById(createdClip.getClipId());
+        assertNull(deleted, "Clip should no longer exist after deletion");
     }
 }

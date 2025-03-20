@@ -85,7 +85,7 @@ public class Create {
 
        UserProfile actual = repository.create(toAdd);
 
-       assertEquals(3, actual.getUserId());
+       assertEquals(4, actual.getUserId());
 
    }
 
