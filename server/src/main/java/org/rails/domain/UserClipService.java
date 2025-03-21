@@ -66,8 +66,13 @@ public class UserClipService {
         return result;
     }
 
-    public boolean delete(int id) {
-        return userClipRepository.deleteById(id);
+    public Result<UserClip> deleteById(int id) {
+        Result<UserClip> result = new Result<>();
+        boolean success = userClipRepository.deleteById(id);
+        if (!success) {
+            result.addErrorMessage("User clip not found.", ResultType.NOT_FOUND);
+        }
+        return result;
     }
 
     private Result<UserClip> validate(UserClip userClip) {

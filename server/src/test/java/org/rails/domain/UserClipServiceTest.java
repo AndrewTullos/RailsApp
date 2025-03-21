@@ -73,6 +73,6 @@ class UserClipServiceTest {
         when(repository.deleteById(1))
                 .thenReturn(true);
 
-        assertTrue(service.delete(1));
+        assertTrue(service.deleteById(1).isSuccess());
     }
 }
