@@ -174,28 +174,9 @@ public class UserProfileJdbcClientRepository implements UserProfileRepository {
 
     @Override
     public boolean deleteById(int userId) {
-        client.sql("DELETE FROM `comment` WHERE comment_user_id = ?")
-                .param(userId)
-                .update();
-
-        client.sql("DELETE FROM `like` WHERE user_id = ?")
-                .param(userId)
-                .update();
-
-        client.sql("DELETE FROM `follow` WHERE follower_id = ? OR followee_id = ?")
-                .param(userId)
-                .param(userId)
-                .update();
-
-        client.sql("DELETE FROM `user_clip` WHERE user_id = ?")
-                .param(userId)
-                .update();
-
         int rowsAffected = client.sql("DELETE FROM `user_profile` WHERE id = ?")
                 .param(userId)
                 .update();
-
         return rowsAffected > 0;
     }
-
 }
