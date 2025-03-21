@@ -49,14 +49,21 @@ public class FileServiceImpl implements FileService {
         FileUploadResponse fileUploadResponse = new FileUploadResponse();
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String todayDate = dateTimeFormatter.format(LocalDate.now());
-        String filePath = "";
+        String filePath = todayDate + "/" + multipartFile.getOriginalFilename();
+
         try {
             ObjectMetadata objectMetadata = new ObjectMetadata();
             objectMetadata.setContentType(multipartFile.getContentType());
             objectMetadata.setContentLength(multipartFile.getSize());
-            filePath = todayDate+"/"+multipartFile.getOriginalFilename();
+
             s3Client.putObject(bucketName, filePath, multipartFile.getInputStream(), objectMetadata);
+
+            String fileUrl = s3Client.getUrl(bucketName, filePath).toString();
+
+//            filePath = todayDate+"/"+multipartFile.getOriginalFilename();
+//            s3Client.putObject(bucketName, filePath, multipartFile.getInputStream(), objectMetadata);
             fileUploadResponse.setFilePath(filePath);
+            fileUploadResponse.setFileUrl(fileUrl);
             fileUploadResponse.setDateTime(LocalDateTime.now());
         } catch (IOException e) {
             log.error("Error occurred ==> {}", e.getMessage());
