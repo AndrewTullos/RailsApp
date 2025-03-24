@@ -5,50 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ec903b1-c9d4-41c4-933e-d15d79c86cd5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/http/Follow.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FollowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/FollowService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/models/FileUploadResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/rails/domain/FollowServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/HeaderOne.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/HeaderOne.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/HeaderTwo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/HeaderTwo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/Login-Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Login-Form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/Upload-Component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Upload-Component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/ui/tabs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/ui/tabs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/pages/DashboardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/pages/DashboardPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/Clip.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Clip.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/File.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/File.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/User.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/User.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UploadMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UploadMetadata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UserClipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UserClipController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/FileUploadResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/FollowJdbcClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/FollowJdbcClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/FollowRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/FollowRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/UserProfileJdbcClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/UserProfileJdbcClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/UserProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/UserProfileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserClipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserClipService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/models/Follow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/models/Follow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/TestHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/TestHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/data/UserProfileJdbcClientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/data/UserProfileJdbcClientRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/domain/UserClipServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/domain/UserClipServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/domain/UserProfileServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/domain/UserProfileServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,14 +114,7 @@
       <option name="MAIN_CLASS_NAME" value="org.rails.data.FollowJdbcClientRepositoryTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,14 +131,7 @@
       <option name="MAIN_CLASS_NAME" value="org.rails.data.FollowJdbcClientRepositoryTest" />
       <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -205,14 +148,7 @@
       <option name="MAIN_CLASS_NAME" value="org.rails.data.FollowJdbcClientRepositoryTest" />
       <option name="METHOD_NAME" value="findAllFolloweesByFollowerId" />
       <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -229,14 +165,7 @@
       <option name="MAIN_CLASS_NAME" value="org.rails.domain.FollowServiceTest$find" />
       <option name="METHOD_NAME" value="findAllFolloweesByFollowerId" />
       <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -246,14 +175,7 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
