@@ -1,6 +1,6 @@
 package org.rails.domain;
 
-import org.rails.data.FileUploadResponse;
+import org.rails.models.FileUploadResponse;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface FileService {

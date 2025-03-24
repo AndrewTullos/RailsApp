@@ -1,5 +1,8 @@
 package org.rails.controllers;
 
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
 import org.rails.domain.Result;
 import org.rails.domain.UserClipService;
 import org.rails.models.UserClip;
@@ -18,9 +21,12 @@ public class UserClipController {
 
     private UserClipService service;
 
+    private SecretSigningKey secretSigningKey;
+
     public UserClipController(UserClipService service) {
         this.service = service;
     }
+
 
     @GetMapping("/{id}")
     public UserClip findById(@PathVariable int id) {
@@ -28,8 +34,13 @@ public class UserClipController {
     }
 
     @GetMapping("/user/{userId}")
-   public List<UserClip> findAllClipsByUserId(@PathVariable int userId) {
+    public List<UserClip> findAllClipsByUserId(@PathVariable int userId) {
         return service.findAllClipsByUserId(userId).getPayload();
+    }
+
+    @GetMapping("/followed/{userId}")
+    public List<UserClip> findAllClipsByUsersFollowed(@PathVariable int userId) {
+        return service.findAllClipsByFollowees(userId).getPayload();
     }
 
     @PostMapping
@@ -40,6 +51,21 @@ public class UserClipController {
             return new ResponseEntity<>(result.getPayload(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(result.getErrorMessages(), HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    private Integer getUserIdFromHeaders(Map<String, String> headers) {
+        if (headers.get("authorization") == null) {
+            return null;
+        }
+
+        try {
+            Jws<Claims> claims = Jwts.parserBuilder()
+                    .setSigningKey(secretSigningKey.getKey())
+                    .build().parseClaimsJws(headers.get("authorization"));
+            return (Integer) claims.getBody().get("userId");
+        } catch (Exception e) {
+            return null;
         }
     }
 

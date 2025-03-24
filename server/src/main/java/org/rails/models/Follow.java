@@ -5,17 +5,17 @@ import java.util.Objects;
 
 public class Follow {
     private int id;
-    private UserProfile followerId;
-    private UserProfile followingId;
+    private UserProfile follower;
+    private UserProfile following;
     private LocalDateTime createdAt;
 
     public Follow() {
     }
 
-    public Follow(int id, UserProfile followerId, UserProfile followingId) {
+    public Follow(int id, UserProfile follower, UserProfile following) {
         this.id = id;
-        this.followerId = followerId;
-        this.followingId = followingId;
+        this.follower = follower;
+        this.following = following;
     }
 
     public int getId() {
@@ -26,20 +26,20 @@ public class Follow {
         this.id = id;
     }
 
-    public UserProfile getFollowerId() {
-        return followerId;
+    public UserProfile getFollower() {
+        return follower;
     }
 
-    public void setFollowerId(UserProfile followerId) {
-        this.followerId = followerId;
+    public void setFollower(UserProfile follower) {
+        this.follower = follower;
     }
 
-    public UserProfile getFollowingId() {
-        return followingId;
+    public UserProfile getFollowing() {
+        return following;
     }
 
-    public void setFollowingId(UserProfile followingId) {
-        this.followingId = followingId;
+    public void setFollowing(UserProfile following) {
+        this.following = following;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -54,11 +54,11 @@ public class Follow {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Follow follow = (Follow) o;
-        return id == follow.id && Objects.equals(followerId, follow.followerId) && Objects.equals(followingId, follow.followingId) && Objects.equals(createdAt, follow.createdAt);
+        return id == follow.id && Objects.equals(follower, follow.follower) && Objects.equals(following, follow.following) && Objects.equals(createdAt, follow.createdAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, followerId, followingId, createdAt);
+        return Objects.hash(id, follower, following, createdAt);
     }
 }

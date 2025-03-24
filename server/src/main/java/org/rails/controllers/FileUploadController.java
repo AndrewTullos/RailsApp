@@ -1,6 +1,6 @@
 package org.rails.controllers;
 
-import org.rails.data.FileUploadResponse;
+import org.rails.models.FileUploadResponse;
 import org.rails.domain.FileService;
 import org.rails.domain.UserClipService;
 import org.rails.models.UserClip;
