@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { jwtDecode } from "jwt-decode";
+import getUserIdFromToken from "../functions/getToken";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -20,36 +20,70 @@ export function UploadComponent({
 	setLoggedInUser,
 	...props
 }) {
+	const userId = getUserIdFromToken(loggedInUser);
+
 	const navigate = useNavigate();
 
 	const [file, setFile] = useState(null);
+	const [caption, setCaption] = useState("");
 	const [errors, setErrors] = useState([]);
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
-		const formData = new FormData();
-		if (file) {
-			formData.append("file", file);
+		if (!file) {
+			setErrors(["Please select a file to upload"]);
+			return;
 		}
+
+		if (!userId) {
+			setErrors(["User ID not found. Please log in again."]);
+			return;
+		}
+
+		const formData = new FormData();
+		formData.append("file", file);
+
+		const metadata = {
+			userId: userId,
+			caption: caption || "",
+		};
+
+		// Convert metadata to a Blob with JSON content type
+		const metadataBlob = new Blob([JSON.stringify(metadata)], {
+			type: "application/json",
+		});
+
+		formData.append("metadata", metadataBlob);
 
 		fetch("http://localhost:8080/api/v1/s3/upload", {
 			method: "POST",
 			body: formData,
-		}).then((response) => {
-			if (response.status >= 200 && response.status < 300) {
-				navigate("/dashboard");
-			} else {
-				return response.json().then((fetchedErrors) => {
-					setErrors(fetchedErrors);
-				});
-			}
-		});
+		})
+			.then((response) => {
+				if (response.status >= 200 && response.status < 300) {
+					return response.json().then((data) => {
+						navigate("/dashboard");
+					});
+				} else {
+					return response.text().then((text) => {
+						setErrors(["Upload failed: " + text]);
+					});
+				}
+			})
+			.catch((error) => {
+				console.error("Upload error:", error);
+				setErrors(["An error occurred during upload"]);
+			});
 	};
 
 	const handleChange = (event) => {
 		const selectedFile = event.target.files[0];
 		setFile(selectedFile);
+	};
+
+	const handleCaptionChange = (event) => {
+		setCaption(event.target.value);
 	};
 
 	function handleCancel() {
@@ -66,8 +100,15 @@ export function UploadComponent({
 				<CardContent>
 					<form onSubmit={handleSubmit}>
 						<div className="flex flex-col gap-6">
+							{errors.length > 0 && (
+								<div className="text-red-500">
+									{errors.map((error, index) => (
+										<p key={index}>{error}</p>
+									))}
+								</div>
+							)}
 							<div className="grid gap-2">
-								<Label htmlFor="clip">Clip Media</Label>
+								<Label htmlFor="file">Clip Media</Label>
 								<Input
 									id="file"
 									name="file"
@@ -77,25 +118,20 @@ export function UploadComponent({
 									required
 								/>
 							</div>
-							{/* <div className="grid gap-2">
+							<div className="grid gap-2">
 								<div className="flex items-center">
-									<Label htmlFor="password">Description</Label>
-									<Link
-										href="#"
-										className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-									>
-										Forgot your password?
-									</Link>
+									<Label htmlFor="caption">Caption</Label>
 								</div>
 								<Input
-									id="password"
-									name="password"
-									type="password"
-									value={user.password}
-									onChange={handleChange}
-									required
+									id="caption"
+									name="caption"
+									type="text"
+									value={caption}
+									onChange={handleCaptionChange}
+									placeholder="Enter a caption (optional)"
 								/>
-							</div> */}
+							</div>
+
 							<Button type="submit" className="w-full">
 								Submit
 							</Button>
@@ -107,12 +143,6 @@ export function UploadComponent({
 								Cancel
 							</Button>
 						</div>
-						{/* <div className="mt-4 text-center text-sm">
-							Don&apos;t have an account?{" "}
-							<Link to="/signup" className="underline underline-offset-4">
-								Sign up
-							</Link>
-						</div> */}
 					</form>
 				</CardContent>
 			</Card>

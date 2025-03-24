@@ -1,10 +1,7 @@
 package org.rails.controllers;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.rails.data.FileUploadResponse;
 import org.rails.domain.FileService;
-import org.rails.domain.Result;
 import org.rails.domain.UserClipService;
 import org.rails.models.UserClip;
 import org.rails.models.UserProfile;
@@ -13,19 +10,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.Map;
-
 @CrossOrigin
 @RestController
-@Slf4j
 @RequestMapping("/api/v1/s3")
-@RequiredArgsConstructor
 public class FileUploadController {
 
     private final FileService fileService;
-
     private final UserClipService service;
 
+    public FileUploadController(FileService fileService, UserClipService service) {
+        this.fileService = fileService;
+        this.service = service;
+    }
 
     @PostMapping("/upload")
     public ResponseEntity<FileUploadResponse> uploadFile(

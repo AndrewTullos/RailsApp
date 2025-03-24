@@ -4,6 +4,11 @@
 GET {{url}}/1 HTTP/1.1
 
 ###
+GET {{url}}/user/1 HTTP/1.1
+
+
+
+###
 # happy path
 POST {{url}}
 Content-Type: application/json
@@ -23,6 +28,7 @@ Content-Type: application/json
             "postalCode": "10001",
             "createdAt": "2025-03-19T19:48:38"
         },
-    "mediaUrl": "https://www.youtube.com/watch?v=9bZkp7q19f0",
-    "caption": "Gangnam Style"
+    "mediaUrl": "https://www.youtube.com/watch?v=uikArUFfdVQ",
+    "caption": "OG Yea Right"
 }
+

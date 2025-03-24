@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.simple.JdbcClient;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
@@ -71,6 +73,30 @@ public class Find {
     void shouldNotFindMissingEmail() {
         UserProfile actual = repository.findByEmail("missingEmail");
         assertNull(actual);
+    }
+
+    @Test
+    void findAll() {
+        List<UserProfile> actual = repository.findAll();
+
+        assertNotNull(actual);
+        assertEquals(3, actual.size());
+    }
+
+    @Test
+    void findAllByCity() {
+        List<UserProfile> actual = repository.findAllByCity("San Francisco");
+
+        assertNotNull(actual);
+        assertEquals(3, actual.size());
+    }
+
+    @Test
+    void shouldNotFindAllByCity() {
+        List<UserProfile> actual = repository.findAllByCity("Doesnt Exist");
+
+        assertNotNull(actual);
+        assertEquals(0, actual.size());
     }
 }
 

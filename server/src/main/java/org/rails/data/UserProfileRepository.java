@@ -12,6 +12,10 @@ public interface UserProfileRepository {
 
     public UserProfile findByEmail(String email);
 
+    public List<UserProfile> findAll();
+
+    public List<UserProfile> findAllByCity(String city);
+
     public UserProfile create(UserProfile userProfile);
 
     public boolean update(UserProfile userProfile);

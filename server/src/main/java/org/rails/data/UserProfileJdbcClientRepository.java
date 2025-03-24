@@ -43,6 +43,51 @@ public class UserProfileJdbcClientRepository implements UserProfileRepository {
     }
 
     @Override
+    public List<UserProfile> findAll() {
+        final String sql = """
+                SELECT
+                    id AS user_id,
+                    username,
+                    email,
+                    password,
+                    profile_picture,
+                    first_name,
+                    last_name,
+                    city,
+                    state,
+                    postal_code,
+                    created_at
+                FROM `user_profile`;
+                """;
+        return client.sql(sql)
+                .query(new UserProfileMapper())
+                .list();
+    }
+
+    @Override
+    public List<UserProfile> findAllByCity(String city) {
+        final String sql = """
+                SELECT
+                    id AS user_id,
+                    username,
+                    email,
+                    password,
+                    profile_picture,
+                    first_name,
+                    last_name,
+                    city,
+                    state,
+                    postal_code,
+                    created_at
+                FROM `user_profile` WHERE city = ?;
+                """;
+        return client.sql(sql)
+                .param(city)
+                .query(new UserProfileMapper())
+                .list();
+    }
+
+    @Override
     public UserProfile findByUsername(String username) {
         final String sql = """
                 SELECT

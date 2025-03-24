@@ -22,6 +22,24 @@ Content-Type: application/json
 }
 
 ###
+# happy path
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "username": "JoeSchmoe",
+    "email": "JoeSchmoe@Test44.com",
+    "password": "Password44!",
+    "profilePicture": null,
+    "firstName": "Joe",
+    "lastName": "Schmoe",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10001"
+}
+
+###
 # unhappy path email/username taken
 POST {{url}}
 Content-Type: application/json

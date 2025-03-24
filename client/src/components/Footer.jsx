@@ -4,7 +4,7 @@ import { Video } from "lucide-react";
 
 function Footer() {
 	return (
-		<footer className="border-t py-8 bg-primary">
+		<footer className="border-t py-8">
 			<div className="container mx-auto px-4">
 				<div className="flex flex-col md:flex-row justify-between items-center gap-4">
 					<div className="flex gap-2">
