@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3ec903b1-c9d4-41c4-933e-d15d79c86cd5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/http/Follow.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FollowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/FollowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/models/FileUploadResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/rails/domain/FollowServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/HeaderOne.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/HeaderOne.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/HeaderTwo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/HeaderTwo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/Login-Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Login-Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/Upload-Component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Upload-Component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/ui/tabs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/ui/tabs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/pages/DashboardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/pages/DashboardPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/Clip.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Clip.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/File.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/File.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/User.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/User.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UploadMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UploadMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UserClipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UserClipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/FileUploadResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/FollowJdbcClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/FollowJdbcClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/FollowRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/FollowRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/UserProfileJdbcClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/UserProfileJdbcClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/UserProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/UserProfileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserClipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserClipService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/models/Follow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/models/Follow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/TestHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/TestHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/data/UserProfileJdbcClientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/data/UserProfileJdbcClientRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/domain/UserClipServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/domain/UserClipServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/domain/UserProfileServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/domain/UserProfileServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2uhTuh0z5ENgdREJ7JSj4t2XYKx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.FollowJdbcClientRepositoryTest.create.executor": "Run",
+    "JUnit.FollowJdbcClientRepositoryTest.executor": "Run",
+    "JUnit.FollowJdbcClientRepositoryTest.findAllFolloweesByFollowerId.executor": "Debug",
+    "JUnit.FollowJdbcClientRepositoryTest.findAllFollowersByUserId.executor": "Run",
+    "JUnit.FollowServiceTest$find.findAllFolloweesByFollowerId.executor": "Debug",
+    "JUnit.FollowServiceTest$find.findAllFolloweesByUserId.executor": "Run",
+    "JUnit.FollowServiceTest$find.findAllFollowersByUserId.executor": "Run",
+    "JUnit.FollowServiceTest.create.executor": "Run",
+    "JUnit.FollowServiceTest.shouldNotCreate.executor": "Run",
+    "JUnit.java in server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "Capstone__Clip__Implementation",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/drew/Desktop/RailsApp/server",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.rails.domain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
+        <env name="aws.s3.bucketName" value="rails-app-capstone" />
+        <env name="aws.s3.secretKey" value="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" />
+        <env name="DB_PASSWORD" value="guitar" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_db" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="org.rails.Main" />
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.rails.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <envs>
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
+        <env name="aws.s3.bucketName" value="rails-app-capstone" />
+        <env name="aws.s3.secretKey" value="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" />
+        <env name="DB_PASSWORD" value="guitar" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_db" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
+      <module name="server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FollowJdbcClientRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.rails.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.rails.data" />
+      <option name="MAIN_CLASS_NAME" value="org.rails.data.FollowJdbcClientRepositoryTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
+        <env name="aws.s3.bucketName" value="rails-app-capstone" />
+        <env name="aws.s3.secretKey" value="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" />
+        <env name="DB_PASSWORD" value="guitar" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FollowJdbcClientRepositoryTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.rails.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.rails.data" />
+      <option name="MAIN_CLASS_NAME" value="org.rails.data.FollowJdbcClientRepositoryTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
+        <env name="aws.s3.bucketName" value="rails-app-capstone" />
+        <env name="aws.s3.secretKey" value="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" />
+        <env name="DB_PASSWORD" value="guitar" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FollowJdbcClientRepositoryTest.findAllFolloweesByFollowerId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.rails.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.rails.data" />
+      <option name="MAIN_CLASS_NAME" value="org.rails.data.FollowJdbcClientRepositoryTest" />
+      <option name="METHOD_NAME" value="findAllFolloweesByFollowerId" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
+        <env name="aws.s3.bucketName" value="rails-app-capstone" />
+        <env name="aws.s3.secretKey" value="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" />
+        <env name="DB_PASSWORD" value="guitar" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FollowServiceTest$find.findAllFolloweesByFollowerId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.rails.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.rails.domain.FollowServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="org.rails.domain.FollowServiceTest$find" />
+      <option name="METHOD_NAME" value="findAllFolloweesByFollowerId" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
+        <env name="aws.s3.bucketName" value="rails-app-capstone" />
+        <env name="aws.s3.secretKey" value="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" />
+        <env name="DB_PASSWORD" value="guitar" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="server" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJDAX46IHG" />
+        <env name="aws.s3.bucketName" value="rails-app-capstone" />
+        <env name="aws.s3.secretKey" value="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" />
+        <env name="DB_PASSWORD" value="guitar" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.FollowJdbcClientRepositoryTest" />
+        <item itemvalue="JUnit.FollowServiceTest$find.findAllFolloweesByFollowerId" />
+        <item itemvalue="JUnit.FollowJdbcClientRepositoryTest.findAllFolloweesByFollowerId" />
+        <item itemvalue="JUnit.FollowJdbcClientRepositoryTest.create" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ec903b1-c9d4-41c4-933e-d15d79c86cd5" name="Changes" comment="" />
+      <created>1742700030498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742700030498</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/rails/data/FollowJdbcClientRepository.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

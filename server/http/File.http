@@ -6,6 +6,6 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "filePath": "clip1.mp4",
+    "filePath": "/client/src/assets/prod.mp4",
     "dateTime": "2025-03-19T19:48:38",
 }

@@ -34,6 +34,7 @@ class UserProfileServiceTest {
                     .thenReturn(makeUser());
 
             UserProfile actual = service.findById(1).getPayload();
+
             assertEquals(expected.getUsername(), actual.getUsername());
             assertEquals(expected.getEmail(), actual.getEmail());
         }

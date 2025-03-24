@@ -8,7 +8,7 @@ public interface FollowRepository {
 
     public List<Follow> findAllFollowersByUserId(int userId);
 
-    public List<Follow> findAllFolloweesByUserId(int userId);
+    public List<Follow> findAllFolloweesByFollowerId(int userId);
 
     public Follow create(Follow follow);
 

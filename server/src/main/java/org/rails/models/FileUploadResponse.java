@@ -1,4 +1,4 @@
-package org.rails.data;
+package org.rails.models;
 
 import java.time.LocalDateTime;
 

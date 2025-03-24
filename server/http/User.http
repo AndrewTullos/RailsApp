@@ -5,21 +5,11 @@ GET {{url}}/1 HTTP/1.1
 
 ###
 # happy path
-POST {{url}}
-Content-Type: application/json
+GET {{url}}/all HTTP/1.1
 
-{
-    "userId": 1,
-    "username": "JohnDoe",
-    "email": "JohnDoe@Test44.com",
-    "password": "Password44!",
-    "profilePicture": null,
-    "firstName": "John",
-    "lastName": "Doe",
-    "city": "New York",
-    "state": "NY",
-    "postalCode": "10001"
-}
+###
+# happy path
+GET {{url}}/all/New%20York HTTP/1.1
 
 ###
 # happy path
@@ -34,6 +24,24 @@ Content-Type: application/json
     "profilePicture": null,
     "firstName": "Joe",
     "lastName": "Schmoe",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10001"
+}
+
+###
+# happy path
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "username": "JohnDoe",
+    "email": "JohnDoe@Test44.com",
+    "password": "Password44!",
+    "profilePicture": null,
+    "firstName": "John",
+    "lastName": "Doe",
     "city": "New York",
     "state": "NY",
     "postalCode": "10001"

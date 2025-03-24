@@ -35,6 +35,15 @@ public class UserProfileController {
         return service.findById(id).getPayload();
     }
 
+    @GetMapping("/all")
+    public List<UserProfile> findAll() {
+        return service.findAll().getPayload();
+    }
+
+    @GetMapping("/all/{city}")
+    public List<UserProfile> findAllByCity(@PathVariable String city) {
+        return service.findAllByCity(city).getPayload();
+    }
 
     @PostMapping
     public ResponseEntity<Object> create(@RequestBody UserProfile user) {
