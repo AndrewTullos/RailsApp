@@ -5,6 +5,8 @@ import org.rails.data.UserProfileRepository;
 import org.rails.models.UserProfile;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserProfileService {
 
@@ -48,6 +50,30 @@ public class UserProfileService {
             result.addErrorMessage("User email not found", ResultType.NOT_FOUND);
         } else {
             result.setPayload(userEmail);
+        }
+        return result;
+    }
+
+    public Result<List<UserProfile>> findAll() {
+        Result<List<UserProfile>> result = new Result<>();
+        List<UserProfile> userProfiles = userProfileRepository.findAll();
+
+        if (userProfiles.isEmpty()) {
+            result.addErrorMessage("No user profiles found.", ResultType.NOT_FOUND);
+        } else {
+            result.setPayload(userProfiles);
+        }
+        return result;
+    }
+
+    public Result<List<UserProfile>> findAllByCity(String city) {
+        Result<List<UserProfile>> result = new Result<>();
+        List<UserProfile> userProfiles = userProfileRepository.findAllByCity(city);
+
+        if (userProfiles.isEmpty()) {
+            result.addErrorMessage("No user profiles found in city.", ResultType.NOT_FOUND);
+        } else {
+            result.setPayload(userProfiles);
         }
         return result;
     }

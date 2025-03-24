@@ -8,8 +8,10 @@ import SignupPage from "./pages/SignupPage";
 import DashboardPage from "./pages/DashboardPage";
 import UploadClipPage from "./pages/UploadClipPage";
 
-import Footer from "./components/Footer";
-import StarsCanvas from "./components/StarBackground";
+import ProfilePage from "./pages/ProfilePage";
+
+// ShadCN
+import { ThemeProvider } from "@/components/theme-provider";
 
 function App() {
 	const [loggedInUser, setLoggedInUser] = useState(null);
@@ -28,52 +30,64 @@ function App() {
 	}
 
 	return (
-		<div className="min-h-screen w-full">
-			<Router>
-				<Routes>
-					<Route path="/" element={<LandingPage />} />
-					<Route
-						path="/login"
-						element={
-							<LoginPage
-								loggedInUser={loggedInUser}
-								setLoggedInUser={setLoggedInUser}
-							/>
-						}
-					/>
-					<Route
-						path="/signup"
-						element={
-							<SignupPage
-								loggedInUser={loggedInUser}
-								setLoggedInUser={setLoggedInUser}
-							/>
-						}
-					/>
-					<Route
-						path="/dashboard"
-						element={
-							<DashboardPage
-								loggedInUser={loggedInUser}
-								setLoggedInUser={setLoggedInUser}
-							/>
-						}
-					/>
+		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+			<div className="min-h-screen w-full">
+				<Router>
+					<Routes>
+						<Route path="/" element={<LandingPage />} />
+						<Route
+							path="/login"
+							element={
+								<LoginPage
+									loggedInUser={loggedInUser}
+									setLoggedInUser={setLoggedInUser}
+								/>
+							}
+						/>
+						<Route
+							path="/signup"
+							element={
+								<SignupPage
+									loggedInUser={loggedInUser}
+									setLoggedInUser={setLoggedInUser}
+								/>
+							}
+						/>
+						<Route
+							path="/dashboard"
+							element={
+								<DashboardPage
+									loggedInUser={loggedInUser}
+									setLoggedInUser={setLoggedInUser}
+								/>
+							}
+						/>
 
-					<Route
-						path="/upload"
-						element={
-							<UploadClipPage
-								loggedInUser={loggedInUser}
-								setLoggedInUser={setLoggedInUser}
-							/>
-						}
-					/>
-					<Route path="/*" element={<NotFoundPage />} />
-				</Routes>
-				<Footer />
-			</Router>
-		</div>
+						<Route
+							path="/upload"
+							element={
+								<UploadClipPage
+									loggedInUser={loggedInUser}
+									setLoggedInUser={setLoggedInUser}
+								/>
+							}
+						/>
+
+						<Route
+							path="/profile/:profileId"
+							element={
+								<ProfilePage
+									loggedInUser={loggedInUser}
+									setLoggedInUser={setLoggedInUser}
+								/>
+							}
+						/>
+
+						<Route path="/*" element={<NotFoundPage />} />
+					</Routes>
+				</Router>
+			</div>
+		</ThemeProvider>
 	);
 }
 

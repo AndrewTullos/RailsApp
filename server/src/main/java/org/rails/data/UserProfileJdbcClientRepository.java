@@ -43,6 +43,51 @@ public class UserProfileJdbcClientRepository implements UserProfileRepository {
     }
 
     @Override
+    public List<UserProfile> findAll() {
+        final String sql = """
+                SELECT
+                    id AS user_id,
+                    username,
+                    email,
+                    password,
+                    profile_picture,
+                    first_name,
+                    last_name,
+                    city,
+                    state,
+                    postal_code,
+                    created_at
+                FROM `user_profile`;
+                """;
+        return client.sql(sql)
+                .query(new UserProfileMapper())
+                .list();
+    }
+
+    @Override
+    public List<UserProfile> findAllByCity(String city) {
+        final String sql = """
+                SELECT
+                    id AS user_id,
+                    username,
+                    email,
+                    password,
+                    profile_picture,
+                    first_name,
+                    last_name,
+                    city,
+                    state,
+                    postal_code,
+                    created_at
+                FROM `user_profile` WHERE city = ?;
+                """;
+        return client.sql(sql)
+                .param(city)
+                .query(new UserProfileMapper())
+                .list();
+    }
+
+    @Override
     public UserProfile findByUsername(String username) {
         final String sql = """
                 SELECT
@@ -174,28 +219,9 @@ public class UserProfileJdbcClientRepository implements UserProfileRepository {
 
     @Override
     public boolean deleteById(int userId) {
-        client.sql("DELETE FROM `comment` WHERE comment_user_id = ?")
-                .param(userId)
-                .update();
-
-        client.sql("DELETE FROM `like` WHERE user_id = ?")
-                .param(userId)
-                .update();
-
-        client.sql("DELETE FROM `follow` WHERE follower_id = ? OR followee_id = ?")
-                .param(userId)
-                .param(userId)
-                .update();
-
-        client.sql("DELETE FROM `user_clip` WHERE user_id = ?")
-                .param(userId)
-                .update();
-
         int rowsAffected = client.sql("DELETE FROM `user_profile` WHERE id = ?")
                 .param(userId)
                 .update();
-
         return rowsAffected > 0;
     }
-
 }

@@ -16,19 +16,24 @@ function Hero() {
 			<section className="relative">
 				<div className="mx-auto max-w-7xl">
 					<div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
-						{/* <svg
-							viewBox="0 0 100 100"
-							preserveAspectRatio="none"
-							aria-hidden="true"
-							className="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-white lg:block"
-						>
-							<polygon points="0,0 90,0 50,100 0,100" />
-						</svg> */}
-
-						<div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+						<div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0 ">
 							<div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl bg-transparent">
+								{/* Blob */}
+								<div
+									className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+									aria-hidden="true"
+								>
+									<div
+										className="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+										style={{
+											clipPath:
+												"polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+										}}
+									></div>
+								</div>
+								{/* Blob */}
 								<div className="hidden sm:mb-10 sm:flex">
-									<div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-100 ring-1 ring-gray-100 hover:ring-indigo-400/70">
+									<div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-100 ring-1 ring-gray-100 hover:ring-indigo-400/70 bg-black ">
 										Only the highlights. Only the best.{"  "}
 										<Link
 											to="/"
@@ -74,7 +79,7 @@ function Hero() {
 						alt="Nollie Heelflip"
 						width="640"
 						height="360"
-						className=" rounded-lg aspect-[3/2] object-contain lg:aspect-auto lg:size-full"
+						className="drop-shadow-lg rounded-lg aspect-[3/2] object-contain lg:aspect-auto lg:size-full"
 						controls-hidden
 						loop
 						autoPlay
@@ -91,7 +96,7 @@ function Hero() {
 						alt="Nollie Heelflip"
 						width="640"
 						height="360"
-						className=" rounded-lg aspect-[3/2] object-contain lg:aspect-auto lg:size-full"
+						className="drop-shadow-lg rounded-lg aspect-[3/2] object-contain lg:aspect-auto lg:size-full"
 						controls-hidden
 						loop
 						autoPlay
@@ -108,7 +113,7 @@ function Hero() {
 						alt="Nollie Heelflip"
 						width="640"
 						height="360"
-						className=" rounded-lg aspect-[3/2] object-contain lg:aspect-auto lg:size-full"
+						className="drop-shadow-lg rounded-lg aspect-[3/2] object-contain lg:aspect-auto lg:size-full"
 						controls-hidden
 						loop
 						autoPlay
@@ -120,38 +125,16 @@ function Hero() {
 				</div>
 			</section>
 
-			{/* HERO */}
-			{/* <section className="py-20 md:py-32 bg-indigo-50">
-				<div className="container mx-auto flex flex-col items-center text-center px-4">
-					<h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl">
-						Share your best moments with the world
-					</h1>
-					<p className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl">
-						Upload, share, and discover amazing video clips and images from
-						sessions. Connect with others through likes and comments.
-					</p>
-					<div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-						<Link href="/signup">
-							<Button size="lg" className="gap-2 bg-indigo-600">
-								Get Started <ArrowRight className="h-4 w-4" />
-							</Button>
-						</Link>
-						<Link href="#how-it-works">
-							<Button size="lg" variant="outline" className="gap-2">
-								How it works <Play className="h-4 w-4" />
-							</Button>
-						</Link>
-					</div>
-				</div>
-			</section> */}
 			{/* FEATURES */}
 			<section id="features" className="py-20">
 				<div className="container mx-auto px-4">
-					<h2 className="text-3xl font-bold text-center mb-12">Features</h2>
+					<h2 className="text-3xl font-bold text-center mb-12 text-white">
+						Features
+					</h2>
 					<div className="grid md:grid-cols-3 gap-8">
-						<div className="bg-white p-6 rounded-lg shadow-sm">
-							<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-								<Video className="h-6 w-6 text-primary" />
+						<div className="bg-primary text-secondary p-6 rounded-lg shadow-sm">
+							<div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+								<Video className="h-6 w-6 text-secondary" />
 							</div>
 							<h3 className="text-xl font-bold mb-2">Share Clips</h3>
 							<p className="text-gray-600">
@@ -159,7 +142,7 @@ function Hero() {
 								sessions.
 							</p>
 						</div>
-						<div className="bg-white p-6 rounded-lg shadow-sm">
+						<div className="bg-primary text-secondary p-6 rounded-lg shadow-sm">
 							<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +154,7 @@ function Hero() {
 									strokeWidth="2"
 									strokeLinecap="round"
 									strokeLinejoin="round"
-									className="h-6 w-6 text-primary"
+									className="h-6 w-6 text-secondary"
 								>
 									<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
 								</svg>
@@ -182,7 +165,7 @@ function Hero() {
 								other users.
 							</p>
 						</div>
-						<div className="bg-white p-6 rounded-lg shadow-sm">
+						<div className="bg-primary text-secondary p-6 rounded-lg shadow-sm">
 							<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +177,7 @@ function Hero() {
 									strokeWidth="2"
 									strokeLinecap="round"
 									strokeLinejoin="round"
-									className="h-6 w-6 text-primary"
+									className="h-6 w-6 text-secondary"
 								>
 									<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
 								</svg>
@@ -210,9 +193,9 @@ function Hero() {
 			</section>
 
 			{/* Testimonials */}
-			<section id="testimonials" className="py-20 bg-slate-300">
+			<section id="testimonials" className="py-20">
 				<div className="container mx-auto px-4">
-					<h2 className="text-3xl font-bold text-center mb-12">
+					<h2 className="text-3xl font-bold text-center mb-12 text-white">
 						What Our Users Say
 					</h2>
 					<div className="grid md:grid-cols-3 gap-8">
@@ -237,6 +220,7 @@ function Hero() {
 								first when making this technology."
 							</p>
 						</div>
+
 						<div className="bg-white p-6 rounded-lg border">
 							<div className="flex items-center gap-4 mb-4">
 								<Avatar className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden cursor-pointer">
@@ -294,7 +278,7 @@ function Hero() {
 			</section>
 
 			{/* Call to Action */}
-			<section id="cta" className="py-20 text-primary-foreground">
+			<section id="cta" className="py-20 border-t-2">
 				<div className="container mx-auto text-center px-4">
 					<h2 className="text-3xl font-bold mb-6">
 						Ready to share your clips?
@@ -309,6 +293,20 @@ function Hero() {
 						</Button>
 					</Link>
 				</div>
+				{/* Blob */}
+				<div
+					className="absolute inset-x-90 top-[800px] -z-10 transform-gpu overflow-hidden blur-3xl"
+					aria-hidden="true"
+				>
+					<div
+						className="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/3 bg-linear-to-tr from-[#ff80b5] to-[#e8a337] opacity-70 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+						style={{
+							clipPath:
+								"polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+						}}
+					></div>
+				</div>
+				{/* Blob */}
 			</section>
 		</main>
 	);

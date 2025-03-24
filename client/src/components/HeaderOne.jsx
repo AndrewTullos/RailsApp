@@ -31,7 +31,9 @@ function HeaderOne() {
 						Login
 					</Link>
 					<Link to="/signup">
-						<Button className="rounded-md bg-indigo-600">Sign Up</Button>
+						<Button className="rounded-md text-white bg-indigo-600">
+							Sign Up
+						</Button>
 					</Link>
 				</div>
 			</div>

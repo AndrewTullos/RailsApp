@@ -69,6 +69,13 @@ export function LoginForm({
 				<CardContent>
 					<form onSubmit={handleSubmit}>
 						<div className="flex flex-col gap-6">
+							{errors.length > 0 && (
+								<div className="text-red-500">
+									{errors.map((error, index) => (
+										<p key={index}>{error}</p>
+									))}
+								</div>
+							)}
 							<div className="grid gap-2">
 								<Label htmlFor="username">Username</Label>
 								<Input
