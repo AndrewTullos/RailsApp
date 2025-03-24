@@ -23,10 +23,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2uhTuh0z5ENgdREJ7JSj4t2XYKx" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -35,29 +35,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "JUnit.FollowJdbcClientRepositoryTest.create.executor": "Run",
-    "JUnit.FollowJdbcClientRepositoryTest.executor": "Run",
-    "JUnit.FollowJdbcClientRepositoryTest.findAllFolloweesByFollowerId.executor": "Debug",
-    "JUnit.FollowJdbcClientRepositoryTest.findAllFollowersByUserId.executor": "Run",
-    "JUnit.FollowServiceTest$find.findAllFolloweesByFollowerId.executor": "Debug",
-    "JUnit.FollowServiceTest$find.findAllFolloweesByUserId.executor": "Run",
-    "JUnit.FollowServiceTest$find.findAllFollowersByUserId.executor": "Run",
-    "JUnit.FollowServiceTest.create.executor": "Run",
-    "JUnit.FollowServiceTest.shouldNotCreate.executor": "Run",
-    "JUnit.java in server.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Capstone__Clip__Implementation",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/drew/Desktop/RailsApp/server",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FollowJdbcClientRepositoryTest.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FollowJdbcClientRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FollowJdbcClientRepositoryTest.findAllFolloweesByFollowerId.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.FollowJdbcClientRepositoryTest.findAllFollowersByUserId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FollowServiceTest$find.findAllFolloweesByFollowerId.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.FollowServiceTest$find.findAllFolloweesByUserId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FollowServiceTest$find.findAllFollowersByUserId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FollowServiceTest.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FollowServiceTest.shouldNotCreate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Capstone__Clip__Implementation&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/drew/Desktop/RailsApp/server&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -114,7 +114,6 @@
       <option name="MAIN_CLASS_NAME" value="org.rails.data.FollowJdbcClientRepositoryTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,7 +130,6 @@
       <option name="MAIN_CLASS_NAME" value="org.rails.data.FollowJdbcClientRepositoryTest" />
       <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
-
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,7 +146,6 @@
       <option name="MAIN_CLASS_NAME" value="org.rails.data.FollowJdbcClientRepositoryTest" />
       <option name="METHOD_NAME" value="findAllFolloweesByFollowerId" />
       <option name="TEST_OBJECT" value="method" />
-
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,7 +162,6 @@
       <option name="MAIN_CLASS_NAME" value="org.rails.domain.FollowServiceTest$find" />
       <option name="METHOD_NAME" value="findAllFolloweesByFollowerId" />
       <option name="TEST_OBJECT" value="method" />
-
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,11 +171,17 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.FollowJdbcClientRepositoryTest" />
+      <item itemvalue="JUnit.FollowJdbcClientRepositoryTest.create" />
+      <item itemvalue="JUnit.FollowJdbcClientRepositoryTest.findAllFolloweesByFollowerId" />
+      <item itemvalue="JUnit.FollowServiceTest$find.findAllFolloweesByFollowerId" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
