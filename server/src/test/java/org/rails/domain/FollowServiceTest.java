@@ -29,7 +29,6 @@ class FollowServiceTest {
         @Test
         void findAllFollowersByUserId() {
             Follow expected = makeFollow();
-
             when(repository.findAllFollowersByUserId(1))
                     .thenReturn(List.of(makeFollow()));
 
@@ -79,5 +78,11 @@ class FollowServiceTest {
 
     @Test
     void deleteById() {
+        when(repository.deleteById(1))
+                .thenReturn(true);
+
+        boolean actual = service.deleteById(1).getPayload();
+
+        assertTrue(actual);
     }
 }
