@@ -1,12 +1,18 @@
 package org.rails.data;
 
 import org.rails.data.mappers.FollowMapper;
+import org.rails.models.Comments;
 import org.rails.models.Follow;
+import org.rails.models.Likes;
+import org.rails.models.UserProfile;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.List;
 

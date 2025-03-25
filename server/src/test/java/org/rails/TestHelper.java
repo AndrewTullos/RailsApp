@@ -1,8 +1,6 @@
 package org.rails;
 
-import org.rails.models.Follow;
-import org.rails.models.UserClip;
-import org.rails.models.UserProfile;
+import org.rails.models.*;
 
 import java.time.LocalDateTime;
 
@@ -25,4 +23,11 @@ public class TestHelper {
         return new Follow(1, makeUser(), makeUser2());
     }
 
+    public static Likes makeLike() {
+        return new Likes(1, makeUser(), makeClip());
+    }
+
+    public static Comments makeComment() {
+        return new Comments(1, makeUser(), makeClip(), "This is a test comment");
+    }
 }
