@@ -67,3 +67,8 @@ CREATE TABLE IF NOT EXISTS `follow` (
     CONSTRAINT `follow_fk1` FOREIGN KEY (`follower_id`) REFERENCES `user_profile`(`id`) ON DELETE CASCADE,
     CONSTRAINT `follow_fk2` FOREIGN KEY (`followee_id`) REFERENCES `user_profile`(`id`) ON DELETE CASCADE
 );
+
+
+SELECT * FROM user_profile;
+SELECT * FROM user_clip;
+SELECT * FROM follow;

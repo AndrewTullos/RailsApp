@@ -30,6 +30,8 @@ class UserProfileJdbcClientRepositoryTest {
 
 @Nested
 public class Find {
+
+
     @Test
     void findById() {
         UserProfile actual = repository.findById(1);
