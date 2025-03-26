@@ -1,5 +1,6 @@
 package org.rails.controllers;
 
+import org.rails.domain.UserProfileService;
 import org.rails.models.FileUploadResponse;
 import org.rails.domain.FileService;
 import org.rails.domain.UserClipService;
@@ -17,10 +18,31 @@ public class FileUploadController {
 
     private final FileService fileService;
     private final UserClipService service;
+    private final UserProfileService userProfileService;
 
-    public FileUploadController(FileService fileService, UserClipService service) {
+    public FileUploadController(FileService fileService, UserClipService service, UserProfileService userProfileService) {
         this.fileService = fileService;
         this.service = service;
+        this.userProfileService = userProfileService;
+    }
+
+    @PostMapping("/profile/picture")
+    public ResponseEntity<FileUploadResponse> uploadProfilePicture(
+            @RequestPart("file") MultipartFile file,
+            @RequestPart("metadata") UploadMetadata metadata) {
+
+        // Handles AWS upload
+        String mediaUrl = fileService.uploadFile(file).getFileUrl();
+
+        // Create UserProfile & UserClip objects
+        UserProfile userProfile = new UserProfile();
+        userProfile.setUserId(metadata.getUserId());
+        userProfile.setProfilePicture(mediaUrl);
+
+
+        userProfileService.update(userProfile);
+
+        return new ResponseEntity<>(new FileUploadResponse(mediaUrl), HttpStatus.OK);
     }
 
     @PostMapping("/upload")

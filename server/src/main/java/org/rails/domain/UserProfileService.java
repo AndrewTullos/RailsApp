@@ -100,7 +100,7 @@ public class UserProfileService {
         Result<UserProfile> result = validate(userProfile);
 
         if (userProfile != null && userProfile.getUserId() <= 0) {
-            result.addErrorMessage("SolarPanel `id` should be set.", ResultType.INVALID);
+            result.addErrorMessage("User Profile `id` should be set.", ResultType.INVALID);
         }
 
         if (result.isSuccess()) {

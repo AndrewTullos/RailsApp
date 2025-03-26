@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ec903b1-c9d4-41c4-933e-d15d79c86cd5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/http/Comment.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http/Like.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/LikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/UserSuggestions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/UserSuggestions.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/CommentsJdbcClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/CommentsJdbcClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/models/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/models/Comments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/data/CommentsJdbcClientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/data/CommentsJdbcClientRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/Clip.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Clip.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/Comment.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Comment.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/Follow.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Follow.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/Like.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Like.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/User.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/User.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

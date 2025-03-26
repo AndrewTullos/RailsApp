@@ -1,4 +1,4 @@
-@url = http://localhost:8080/api/follow/
+@url = http://localhost:8080/api/follow
 
 ###
 # happy path
@@ -24,29 +24,31 @@ Content-Type: application/json
 {
     "id": 1,
     "follower": {
-        "userId": 1,
-        "username": "JoeSchmoe",
-        "email": "JoeSchmoe@Test44.com",
-        "password": "Password44!",
-        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/2025-03-21/babyyoda.jpg",
-        "firstName": "Joe",
-        "lastName": "Schmoe",
-        "city": "New York",
-        "state": "NY",
-        "postalCode": "10001"
+            "userId": 1,
+            "username": "JoeSchmoe",
+            "email": "JoeSchmoe@Test44.com",
+            "password": "Password44!",
+            "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+            "firstName": "Joe",
+            "lastName": "Schmoe",
+            "city": "Nashville",
+            "state": "TN",
+            "postalCode": "10001",
+            "createdAt": "2025-03-22T13:05:11"
         },
     "following": {
-        "userId": 2,
-        "username": "JohnDoe",
-        "email": "JohnDoe@Test44.com",
-        "password": "Password44!",
-        "profilePicture": null,
-        "firstName": "John",
-        "lastName": "Doe",
-        "city": "New York",
-        "state": "NY",
-        "postalCode": "10001"
-    }
+            "userId": 2,
+            "username": "JohnDoe",
+            "email": "JohnDoe@Test44.com",
+            "password": "Password44!",
+            "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/John.jpg",
+            "firstName": "John",
+            "lastName": "Doe",
+            "city": "Nashville",
+            "state": "TN",
+            "postalCode": "10001",
+            "createdAt": "2025-03-22T13:05:18"
+        },
 }
 
 ###

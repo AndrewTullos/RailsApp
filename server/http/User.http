@@ -1,7 +1,7 @@
 @url = http://localhost:8080/api/user
 
 ###
-GET {{url}}/1 HTTP/1.1
+GET {{url}}/2 HTTP/1.1
 
 ###
 # happy path
@@ -12,7 +12,7 @@ GET {{url}}/all HTTP/1.1
 GET {{url}}/all/New%20York HTTP/1.1
 
 ###
-# happy path
+# happy path user1
 POST {{url}}
 Content-Type: application/json
 
@@ -21,29 +21,47 @@ Content-Type: application/json
     "username": "JoeSchmoe",
     "email": "JoeSchmoe@Test44.com",
     "password": "Password44!",
-    "profilePicture": null,
+    "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
     "firstName": "Joe",
     "lastName": "Schmoe",
-    "city": "New York",
-    "state": "NY",
+    "city": "Nashville",
+    "state": "TN",
     "postalCode": "10001"
 }
 
 ###
-# happy path
+# happy path user2
 POST {{url}}
 Content-Type: application/json
 
 {
-    "userId": 1,
+    "userId": 2,
     "username": "JohnDoe",
     "email": "JohnDoe@Test44.com",
     "password": "Password44!",
-    "profilePicture": null,
+    "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/John.jpg",
     "firstName": "John",
     "lastName": "Doe",
-    "city": "New York",
-    "state": "NY",
+    "city": "Nashville",
+    "state": "TN",
+    "postalCode": "10001"
+}
+
+###
+# happy path user3
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 3,
+    "username": "SuzyQ",
+    "email": "SuzyQ@Test44.com",
+    "password": "Password44!",
+    "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Suzy.jpg",
+    "firstName": "Suzy",
+    "lastName": "Q",
+    "city": "Nashville",
+    "state": "TN",
     "postalCode": "10001"
 }
 
