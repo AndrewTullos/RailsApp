@@ -97,7 +97,7 @@ public class UserProfileService {
     }
 
     public Result<UserProfile> update(UserProfile userProfile) {
-        Result<UserProfile> result = validate(userProfile);
+        Result<UserProfile> result = new Result<>();
 
         if (userProfile != null && userProfile.getUserId() <= 0) {
             result.addErrorMessage("User Profile `id` should be set.", ResultType.INVALID);

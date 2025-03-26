@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ec903b1-c9d4-41c4-933e-d15d79c86cd5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../client/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/pages/DashboardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/pages/DashboardPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/Clip.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Clip.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/Comment.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Comment.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/Follow.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Follow.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/Like.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Like.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/User.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/User.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UploadMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UploadMetadata.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/data/UserProfileJdbcClientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/data/UserProfileJdbcClientRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "JUnit.CommentServiceTest.create.executor": "Run",
     "JUnit.CommentServiceTest.deleteById.executor": "Run",
     "JUnit.CommentServiceTest.executor": "Run",
@@ -78,6 +77,7 @@
     "JUnit.LikesJdbcClientRepositoryTest.create.executor": "Run",
     "JUnit.LikesJdbcClientRepositoryTest.executor": "Run",
     "JUnit.LikesJdbcClientRepositoryTest.findAllLikesByClipId.executor": "Run",
+    "JUnit.UserProfileJdbcClientRepositoryTest$Create.update.executor": "Run",
     "JUnit.UserProfileJdbcClientRepositoryTest$Find.findAll.executor": "Run",
     "JUnit.UserProfileJdbcClientRepositoryTest.executor": "Run",
     "JUnit.data in server.executor": "Run",
@@ -106,9 +106,9 @@
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJNBJCUOUS" />
         <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
+        <env name="aws.s3.secretKey" value="tb/a+2CwS38qfurkcJmGVBuzAXI8WmxfHztekEV0" />
         <env name="DB_PASSWORD" value="guitar" />
         <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_db" />
         <env name="DB_USERNAME" value="root" />
@@ -139,55 +139,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.rails.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.rails.domain" />
-      <option name="MAIN_CLASS_NAME" value="org.rails.domain.CommentServiceTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommentServiceTest.findAllCommentsByClipId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.rails.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.rails.domain" />
-      <option name="MAIN_CLASS_NAME" value="org.rails.domain.CommentServiceTest" />
-      <option name="METHOD_NAME" value="findAllCommentsByClipId" />
-      <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommentsJdbcClientRepositoryTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserProfileJdbcClientRepositoryTest$Create.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
@@ -195,14 +147,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.rails.data" />
-      <option name="MAIN_CLASS_NAME" value="org.rails.data.CommentsJdbcClientRepositoryTest" />
-      <option name="METHOD_NAME" value="create" />
+      <option name="PACKAGE_NAME" value="org.rails.data.UserProfileJdbcClientRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="org.rails.data.UserProfileJdbcClientRepositoryTest$Create" />
+      <option name="METHOD_NAME" value="update" />
       <option name="TEST_OBJECT" value="method" />
       <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJNBJCUOUS" />
         <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
+        <env name="aws.s3.secretKey" value="tb/a+2CwS38qfurkcJmGVBuzAXI8WmxfHztekEV0" />
         <env name="DB_PASSWORD" value="guitar" />
         <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
         <env name="DB_USERNAME" value="root" />
@@ -217,9 +169,9 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJNBJCUOUS" />
         <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
+        <env name="aws.s3.secretKey" value="tb/a+2CwS38qfurkcJmGVBuzAXI8WmxfHztekEV0" />
         <env name="DB_PASSWORD" value="guitar" />
         <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
         <env name="DB_USERNAME" value="root" />
@@ -228,31 +180,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="server" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="directory" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
-      <dir value="$PROJECT_DIR$/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.UserProfileJdbcClientRepositoryTest$Create.update" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.java in server" />
-        <item itemvalue="JUnit.CommentsJdbcClientRepositoryTest.create" />
-        <item itemvalue="JUnit.CommentServiceTest" />
-        <item itemvalue="JUnit.CommentServiceTest.findAllCommentsByClipId" />
+        <item itemvalue="JUnit.UserProfileJdbcClientRepositoryTest$Create.update" />
       </list>
     </recent_temporary>
   </component>
@@ -280,5 +215,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java</url>
+          <line>30</line>
+          <properties class="org.rails.controllers.FileUploadController" method="uploadProfilePicture">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
