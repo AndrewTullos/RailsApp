@@ -31,6 +31,8 @@ import { SignOut } from "./SignOut";
 
 export default function Navbar({ loggedInUser, setLoggedInUser, children }) {
 	const navigate = useNavigate();
+	const [errors, setErrors] = useState([]);
+
 	const [userData, setUserData] = useState([]);
 
 	function upload() {
