@@ -36,7 +36,7 @@ function Hero() {
 									<div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-100 ring-1 ring-gray-100 hover:ring-indigo-400/70 bg-black ">
 										Only the highlights. Only the best.{"  "}
 										<Link
-											to="/"
+											to="/signup"
 											className="whitespace-nowrap font-semibold text-indigo-600"
 										>
 											<span aria-hidden="true" className="absolute inset-0" />
@@ -91,7 +91,7 @@ function Hero() {
 				</div>
 
 				{/* BG Video */}
-				<div className="bg-transparent lg:absolute lg:inset-y-60 lg:right-60 lg:w-1/4">
+				<div className="bg-transparent lg:absolute lg:inset-y-60 lg:right-70 lg:w-1/4">
 					<video
 						alt="Nollie Heelflip"
 						width="640"
@@ -143,7 +143,7 @@ function Hero() {
 							</p>
 						</div>
 						<div className="bg-primary text-secondary p-6 rounded-lg shadow-sm">
-							<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+							<div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="24"
@@ -166,7 +166,7 @@ function Hero() {
 							</p>
 						</div>
 						<div className="bg-primary text-secondary p-6 rounded-lg shadow-sm">
-							<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+							<div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="24"
@@ -207,7 +207,7 @@ function Hero() {
 										alt="@user"
 									/>
 									<AvatarFallback>
-										<User stroke="black" className="h-5 w-5" />
+										<User stroke="white" className="h-5 w-5" />
 									</AvatarFallback>
 								</Avatar>
 								<div>
@@ -229,7 +229,7 @@ function Hero() {
 										alt="@user"
 									/>
 									<AvatarFallback>
-										<User stroke="black" className="h-5 w-5" />
+										<User stroke="white" className="h-5 w-5" />
 									</AvatarFallback>
 								</Avatar>
 								<div>
@@ -251,7 +251,7 @@ function Hero() {
 										alt="@user"
 									/>
 									<AvatarFallback>
-										<User stroke="black" className="h-5 w-5" />
+										<User stroke="white" className="h-5 w-5" />
 									</AvatarFallback>
 								</Avatar>
 								{/* <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">

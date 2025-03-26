@@ -6,6 +6,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import DashboardPage from "./pages/DashboardPage";
+import About from "./pages/About";
 import UploadClipPage from "./pages/UploadClipPage";
 
 import ProfilePage from "./pages/ProfilePage";
@@ -82,6 +83,8 @@ function App() {
 								/>
 							}
 						/>
+
+						<Route path="/about" element={<About />} />
 
 						<Route path="/*" element={<NotFoundPage />} />
 					</Routes>

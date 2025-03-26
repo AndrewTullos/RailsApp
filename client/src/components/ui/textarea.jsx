@@ -64,7 +64,7 @@ function Textarea({ userProfile, clipId, loggedInUser, className, ...props }) {
 	};
 
 	return (
-		<div>
+		<div className="">
 			<textarea
 				data-slot="textarea"
 				value={comment}
@@ -77,7 +77,9 @@ function Textarea({ userProfile, clipId, loggedInUser, className, ...props }) {
 				)}
 				{...props}
 			/>
-			<Button onClick={handleSubmit}>Submit</Button>
+			<Button className="m-2" onClick={handleSubmit}>
+				Submit
+			</Button>
 			{errors.length > 0 && (
 				<div className="text-red-500 mt-2">{errors[0]}</div>
 			)}
