@@ -37,12 +37,11 @@ class CommentsJdbcClientRepositoryTest {
 
     @Test
     void create() {
-        Comments toCreate = TestHelper.makeComment();
-        toCreate.setId(0);
+        Comments comment = TestHelper.makeComment();
+        Comments actual = repository.create(comment);
 
-        Comments actual = repository.create(toCreate);
         assertNotNull(actual);
-        assertNotEquals(0, actual.getId());
+        assertEquals(1, actual.getId());
     }
 
     @Test

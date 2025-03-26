@@ -20,7 +20,7 @@ public class CommentsJdbcClientRepository implements CommentsRepository {
     }
 
     @Override
-    public List findAllCommentsByClipId(int clipId) {
+    public List<Comments> findAllCommentsByClipId(int clipId) {
         final String sql = """
                SELECT
                     comments.id AS comment_id,
@@ -59,7 +59,7 @@ public class CommentsJdbcClientRepository implements CommentsRepository {
         comment.setCreated_at(currentTime);
         final String sql = """
             INSERT INTO comment (comment_user_id, clip_id, text, created_at)
-            VALUES (:comment_user_id, :clip_id, :text, created_at);
+            VALUES (:comment_user_id, :clip_id, :text, :created_at);
             """;
         KeyHolder keyHolder = new GeneratedKeyHolder();
 
@@ -71,8 +71,7 @@ public class CommentsJdbcClientRepository implements CommentsRepository {
                 .update(keyHolder);
 
         if (rowsAffected > 0) {
-            comment.setId(keyHolder.getKey().intValue());
-            return comment;
+            return null;
         }
 
         comment.setId(keyHolder.getKey().intValue());

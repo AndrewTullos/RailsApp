@@ -19,7 +19,6 @@ public class Comments {
         this.commenter = commenter;
         this.clip = clip;
         this.text = text;
-
     }
 
     public int getId() {

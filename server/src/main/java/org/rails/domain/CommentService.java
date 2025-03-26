@@ -1,9 +1,8 @@
 package org.rails.domain;
 
+
 import org.rails.data.CommentsRepository;
 import org.rails.models.Comments;
-import org.rails.models.Follow;
-import org.rails.models.Likes;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

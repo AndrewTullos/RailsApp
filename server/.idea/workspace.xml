@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ec903b1-c9d4-41c4-933e-d15d79c86cd5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/LikeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/rails/domain/CommentServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/rails/domain/LikeServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http/Comment.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http/Like.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/LikeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/components/UserSuggestions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/UserSuggestions.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/domain/FollowServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/domain/FollowServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/data/CommentsJdbcClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/data/CommentsJdbcClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/models/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/models/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/data/CommentsJdbcClientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/data/CommentsJdbcClientRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,20 +24,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AndrewTullos/RailsApp.git",
-    "accountId": "39acf9dc-6ef7-498a-a929-879a4b1ed74e"
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AndrewTullos"
   }
 }]]></component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AndrewTullos/RailsApp.git&quot;,
+    &quot;accountId&quot;: &quot;39acf9dc-6ef7-498a-a929-879a4b1ed74e&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -52,6 +61,7 @@
     "Application.Main.executor": "Run",
     "JUnit.CommentServiceTest.create.executor": "Run",
     "JUnit.CommentServiceTest.deleteById.executor": "Run",
+    "JUnit.CommentServiceTest.executor": "Run",
     "JUnit.CommentServiceTest.findAllCommentsByClipId.executor": "Run",
     "JUnit.CommentsJdbcClientRepositoryTest.create.executor": "Run",
     "JUnit.CommentsJdbcClientRepositoryTest.executor": "Run",
@@ -72,7 +82,10 @@
     "JUnit.LikesJdbcClientRepositoryTest.findAllLikesByClipId.executor": "Run",
     "JUnit.UserProfileJdbcClientRepositoryTest$Find.findAll.executor": "Run",
     "JUnit.UserProfileJdbcClientRepositoryTest.executor": "Run",
+    "JUnit.data in server.executor": "Run",
+    "JUnit.domain in server.executor": "Run",
     "JUnit.java in server.executor": "Run",
+    "JUnit.rails in server.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -92,7 +105,28 @@
       <recent name="org.rails.data" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LikeServiceTest">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
+        <env name="aws.s3.bucketName" value="rails-app-capstone" />
+        <env name="aws.s3.secretKey" value="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" />
+        <env name="DB_PASSWORD" value="guitar" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_db" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="org.rails.Main" />
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.rails.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <envs>
         <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
@@ -107,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentServiceTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
@@ -117,32 +151,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.rails.domain" />
       <option name="MAIN_CLASS_NAME" value="org.rails.domain.CommentServiceTest" />
-      <option name="METHOD_NAME" value="create" />
-      <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommentServiceTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.rails.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.rails.domain" />
-      <option name="MAIN_CLASS_NAME" value="org.rails.domain.CommentServiceTest" />
-      <option name="METHOD_NAME" value="deleteById" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <envs>
         <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
         <env name="aws.s3.bucketName" value="rails-app-capstone" />
@@ -179,42 +189,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FollowServiceTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentsJdbcClientRepositoryTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.rails.domain.*" />
+          <option name="PATTERN" value="org.rails.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.rails.domain" />
-      <option name="MAIN_CLASS_NAME" value="org.rails.domain.FollowServiceTest" />
-      <option name="METHOD_NAME" value="deleteById" />
+      <option name="PACKAGE_NAME" value="org.rails.data" />
+      <option name="MAIN_CLASS_NAME" value="org.rails.data.CommentsJdbcClientRepositoryTest" />
+      <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
-        <env name="aws.s3.bucketName" value="rails-app-capstone" />
-        <env name="aws.s3.secretKey" value="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" />
-        <env name="DB_PASSWORD" value="guitar" />
-        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
-        <env name="DB_USERNAME" value="root" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LikeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.rails.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.rails.domain" />
-      <option name="MAIN_CLASS_NAME" value="org.rails.domain.LikeServiceTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
       <envs>
         <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
         <env name="aws.s3.bucketName" value="rails-app-capstone" />
@@ -244,12 +230,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <envs>
+        <env name="aws.s3.accessKey" value="AKIAZI2LFHCJBEMNVN7F" />
+        <env name="aws.s3.bucketName" value="rails-app-capstone" />
+        <env name="aws.s3.secretKey" value="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" />
+        <env name="DB_PASSWORD" value="guitar" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/rails_app_test" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LikeServiceTest" />
-        <item itemvalue="JUnit.FollowServiceTest.deleteById" />
-        <item itemvalue="JUnit.CommentServiceTest.deleteById" />
-        <item itemvalue="JUnit.CommentServiceTest.create" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.java in server" />
+        <item itemvalue="JUnit.CommentsJdbcClientRepositoryTest.create" />
+        <item itemvalue="JUnit.CommentServiceTest" />
         <item itemvalue="JUnit.CommentServiceTest.findAllCommentsByClipId" />
       </list>
     </recent_temporary>
