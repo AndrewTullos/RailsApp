@@ -86,10 +86,10 @@ export default function Navbar({ loggedInUser, setLoggedInUser, children }) {
 					{/* <Link href="#" className="mr-6 hidden lg:flex" prefetch={false}> */}
 					<Link
 						to="/dashboard"
-						className="flex items-center gap-2 font-semibold"
+						className="flex items-center gap-2 font-semibold "
 					>
 						<Video className="h-6 w-6" />
-						<span className="text-xl font-bold m-1">Rails App</span>
+						<span className="text-xl font-bold m-1 ">Rails App</span>
 					</Link>
 					<div className="grid gap-2 py-6">
 						<Link
@@ -190,12 +190,12 @@ export default function Navbar({ loggedInUser, setLoggedInUser, children }) {
 						<DropdownMenuGroup>
 							<DropdownMenuItem>
 								<Link to={`/profile/${loggedInUser.userId}`}>Profile</Link>
-								<DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+								{/* <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut> */}
 							</DropdownMenuItem>
 
 							<DropdownMenuItem>
-								Settings
-								<DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+								<Link to={`/settings/${userId}`}>Settings</Link>
+								{/* <DropdownMenuShortcut>⌘S</DropdownMenuShortcut> */}
 							</DropdownMenuItem>
 						</DropdownMenuGroup>
 
@@ -203,12 +203,12 @@ export default function Navbar({ loggedInUser, setLoggedInUser, children }) {
 						<DropdownMenuItem>
 							<Link to={"https://github.com/AndrewTullos/"}>GitHub</Link>
 						</DropdownMenuItem>
-						<DropdownMenuItem>Support</DropdownMenuItem>
-						<DropdownMenuItem disabled>API</DropdownMenuItem>
+						{/* <DropdownMenuItem>Support</DropdownMenuItem> */}
+						{/* <DropdownMenuItem disabled>API</DropdownMenuItem> */}
 						<DropdownMenuSeparator />
 						<DropdownMenuItem>
 							<SignOut />
-							<DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+							{/* <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut> */}
 						</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>

@@ -44,7 +44,7 @@ function UserSuggestCard({ user }) {
 								</p>
 							</div>
 							<div className="flex gap-4 text-sm"></div>
-							<p className="max-w-md">I skate!</p>
+							{/* <p className="max-w-md">I skate!</p> */}
 						</div>
 					</div>
 				</div>

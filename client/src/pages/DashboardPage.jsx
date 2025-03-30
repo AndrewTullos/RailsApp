@@ -24,7 +24,10 @@ function DashboardPage({ loggedInUser, setLoggedInUser, children }) {
 
 	return (
 		<SidebarProvider>
-			<AppSidebar className="bg-primary text-secondary" />
+			<AppSidebar
+				loggedInUser={loggedInUser}
+				className="bg-primary text-secondary"
+			/>
 
 			<div className="min-h-screen w-full text-white flex flex-col">
 				<HeaderTwo

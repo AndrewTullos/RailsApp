@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import getToken from "../functions/getToken";
+
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
 import {
@@ -11,36 +15,41 @@ import {
 	SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-// Menu items.
-const items = [
-	{
-		title: "Home",
-		url: "/dashboard",
-		icon: Home,
-	},
-	// {
-	// 	title: "Inbox",
-	// 	url: "#",
-	// 	icon: Inbox,
-	// },
-	// {
-	// 	title: "Calendar",
-	// 	url: "#",
-	// 	icon: Calendar,
-	// },
-	// {
-	// 	title: "Search",
-	// 	url: "#",
-	// 	icon: Search,
-	// },
-	{
-		title: "Settings",
-		url: "#",
-		icon: Settings,
-	},
-];
+export function AppSidebar({ loggedInUser }) {
+	// const { profileId } = useParams();
 
-export function AppSidebar() {
+	const userId = getToken(loggedInUser);
+	// console.log(userId);
+
+	// Menu items.
+	const items = [
+		{
+			title: "Home",
+			url: `/dashboard`,
+			icon: Home,
+		},
+		// {
+		// 	title: "Inbox",
+		// 	url: "#",
+		// 	icon: Inbox,
+		// },
+		// {
+		// 	title: "Calendar",
+		// 	url: "#",
+		// 	icon: Calendar,
+		// },
+		// {
+		// 	title: "Search",
+		// 	url: "#",
+		// 	icon: Search,
+		// },
+		{
+			title: "Settings",
+			url: `/settings/${userId}`,
+			icon: Settings,
+		},
+	];
+
 	return (
 		<Sidebar>
 			<SidebarContent>

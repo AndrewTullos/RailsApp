@@ -287,8 +287,8 @@ function Hero() {
 						Join thousands of users who are already sharing their best moments
 						on Rails.
 					</p>
-					<Link href="/signup">
-						<Button size="lg" variant="secondary">
+					<Link to="/signup">
+						<Button className="bg-indigo-600" size="lg" variant="secondary">
 							Sign Up Now
 						</Button>
 					</Link>
