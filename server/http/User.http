@@ -59,11 +59,150 @@ Content-Type: application/json
     "password": "Password44!",
     "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Suzy.jpg",
     "firstName": "Suzy",
-    "lastName": "Q",
+    "lastName": "Queso",
     "city": "Nashville",
     "state": "TN",
     "postalCode": "10001"
 }
+
+###
+# happy path user4
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 4,
+    "username": "Scoot2Live",
+    "email": "SparkleKitten@Test44.com",
+    "password": "Password44!",
+    "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/photo-1535713875002-d1d0cf377fde-2.jpg",
+    "firstName": "David",
+    "lastName": "Davidson",
+    "city": "Nashville",
+    "state": "TN",
+    "postalCode": "10001"
+}
+
+###
+# happy path user5
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 5,
+    "username": "TonyHawk",
+    "email": "TonyHawk@Test44.com",
+    "password": "Password44!",
+    "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Skater_Tony_Hawk-1.jpg",
+    "firstName": "Tony",
+    "lastName": "Hawk",
+    "city": "Nashville",
+    "state": "TN",
+    "postalCode": "10001"
+}
+
+###
+# happy path user6
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 6,
+    "username": "RodneyM",
+    "email": "RodneyM@Test44.com",
+    "password": "Password44!",
+    "profilePicture": "",
+    "firstName": "Rodney",
+    "lastName": "Mullen",
+    "city": "Nashville",
+    "state": "TN",
+    "postalCode": "10001"
+}
+
+###
+# happy path user7
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 7,
+    "username": "Johnny",
+    "email": "Johnny@Test44.com",
+    "password": "Password44!",
+    "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/pexels-leonardo-jarro-204864-633432.jpg",
+    "firstName": "Johnny",
+    "lastName": "Rocket",
+    "city": "Nashville",
+    "state": "TN",
+    "postalCode": "10001"
+}
+
+###
+# happy path user8
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 8,
+    "username": "JaneDoe",
+    "email": "JaneD@Test44.com",
+    "password": "Password44!",
+    "profilePicture": "",
+    "firstName": "Jane",
+    "lastName": "Dough",
+    "city": "Nashville",
+    "state": "TN",
+    "postalCode": "10001"
+}
+
+
+###
+# happy path user9
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 9,
+    "username": "LuisSkates",
+    "email": "LuisSkates@Test44.com",
+    "password": "Password44!",
+    "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Luis.jpg",
+    "firstName": "Luis",
+    "lastName": "O.",
+    "city": "Nashville",
+    "state": "TN",
+    "postalCode": "10001"
+}
+
+###
+# happy path user10
+POST {{url}}
+Content-Type: application/json
+
+{
+    "userId": 10,
+    "username": "Zachary",
+    "email": "Zboy@Test44.com",
+    "password": "Password44!",
+    "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Zach.jpg",
+    "firstName": "Zack",
+    "lastName": "Travis",
+    "city": "Nashville",
+    "state": "TN",
+    "postalCode": "10001"
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###
 # unhappy path email/username taken

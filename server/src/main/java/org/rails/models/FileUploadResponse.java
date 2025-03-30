@@ -7,6 +7,8 @@ public class FileUploadResponse {
     private String fileUrl;
     private LocalDateTime dateTime;
 
+    // https://s3.<region>.amazonaws.com/<bucket>/<key>
+
     public FileUploadResponse() {
     }
 

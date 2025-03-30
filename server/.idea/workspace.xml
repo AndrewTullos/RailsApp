@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ec903b1-c9d4-41c4-933e-d15d79c86cd5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/AppSideBar2.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/AppSidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/AppSidebar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/Signup-Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Signup-Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/UserProfileCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/UserProfileCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/UserSuggestCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/UserSuggestCard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/pages/DashboardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/pages/DashboardPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UploadMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/controllers/UploadMetadata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/UserProfileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/rails/data/UserProfileJdbcClientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rails/data/UserProfileJdbcClientRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/Clip.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Clip.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/Comment.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Comment.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/Follow.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Follow.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/Like.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/Like.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/User.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/User.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/domain/FileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/rails/models/FileUploadResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rails/models/FileUploadResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +65,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "JUnit.CommentServiceTest.create.executor": "Run",
     "JUnit.CommentServiceTest.deleteById.executor": "Run",
     "JUnit.CommentServiceTest.executor": "Run",
@@ -215,25 +225,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java</url>
-          <line>30</line>
-          <properties class="org.rails.controllers.FileUploadController" method="uploadProfilePicture">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/rails/controllers/FileUploadController.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

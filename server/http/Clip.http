@@ -16,44 +16,65 @@ Content-Type: application/json
 {
     "clipId": 1,
     "userProfile": {
-            "userId": 1,
-            "username": "JoeSchmoe",
-            "email": "JoeSchmoe@Test44.com",
-            "password": "Password44!",
-            "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
-            "firstName": "Joe",
-            "lastName": "Schmoe",
-            "city": "Nashville",
-            "state": "TN",
-            "postalCode": "10001",
-            "createdAt": "2025-03-22T13:05:11"
-        },
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
     "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Tre.mp4",
-    "caption": "OG Yea Right"
+    "caption": "Working on consistency, baby steps"
 }
 
 ###
-# happy path user2
+# happy path user1
 POST {{url}}
 Content-Type: application/json
 
 {
     "clipId": 2,
     "userProfile": {
-            "userId": 2,
-            "username": "JohnDoe",
-            "email": "JohnDoe@Test44.com",
-            "password": "Password44!",
-            "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/John.jpg",
-            "firstName": "John",
-            "lastName": "Doe",
-            "city": "Nashville",
-            "state": "TN",
-            "postalCode": "10001",
-            "createdAt": "2025-03-22T13:05:18"
-        },
-    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/kickflip.mp4",
-    "caption": "OG Yea Right"
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/frontboard.mp4",
+    "caption": "Steezy - Kickflip"
+}
+
+###
+# happy path user1
+POST {{url}}
+Content-Type: application/json
+
+{
+    "clipId": 3,
+    "userProfile": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/angle+2.mp4",
+    "caption": "As above so below"
 }
 
 
@@ -63,7 +84,30 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "clipId": 2,
+    "clipId": 4,
+    "userProfile": {
+        "userId": 2,
+        "username": "JohnDoe",
+        "email": "JohnDoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/John.jpg",
+        "firstName": "John",
+        "lastName": "Doe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/gotit.mp4",
+    "caption": "Cruisn"
+}
+
+###
+# happy path user3
+POST {{url}}
+Content-Type: application/json
+
+{
+    "clipId": 5,
     "userProfile": {
         "userId": 3,
         "username": "SuzyQ",
@@ -71,12 +115,104 @@ Content-Type: application/json
         "password": "Password44!",
         "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Suzy.jpg",
         "firstName": "Suzy",
-        "lastName": "Q",
+        "lastName": "Queso",
         "city": "Nashville",
         "state": "TN",
         "postalCode": "10001"
     },
     "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/girl.mp4",
-    "caption": "Yurrrr"
+    "caption": "Bolts babbbbyyyy"
 }
 
+###
+# happy path user4
+POST {{url}}
+Content-Type: application/json
+
+{
+    "clipId": 6,
+    "userProfile": {
+        "userId": 4,
+        "username": "Scoot2Live",
+        "email": "SparkleKitten@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/photo-1535713875002-d1d0cf377fde-2.jpg",
+        "firstName": "David",
+        "lastName": "Davidson",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Scooter.mp4",
+    "caption": "Does anyone else scoot?!?"
+}
+
+###
+# happy path user7
+POST {{url}}
+Content-Type: application/json
+
+{
+    "clipId": 7,
+    "userProfile": {
+        "userId": 7,
+        "username": "Johnny",
+        "email": "Johnny@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/pexels-leonardo-jarro-204864-633432.jpg",
+        "firstName": "Johnny",
+        "lastName": "Rocket",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/pop.mp4",
+    "caption": "Got pop like me???!?"
+}
+
+
+###
+# happy path user9
+POST {{url}}
+Content-Type: application/json
+
+{
+    "clipId": 8,
+    "userProfile": {
+        "userId": 9,
+        "username": "LuisSkates",
+        "email": "LuisSkates@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Luis.jpg",
+        "firstName": "Luis",
+        "lastName": "O.",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/manny.mp4",
+    "caption": "Locked in @ the clock factory!"
+}
+
+###
+# happy path user10
+POST {{url}}
+Content-Type: application/json
+
+{
+    "clipId": 9,
+    "userProfile": {
+        "userId": 10,
+        "username": "Zachary",
+        "email": "Zboy@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Zach.jpg",
+        "firstName": "Zack",
+        "lastName": "Travis",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/kicker.mp4",
+    "caption": "Cruisn'"
+}
