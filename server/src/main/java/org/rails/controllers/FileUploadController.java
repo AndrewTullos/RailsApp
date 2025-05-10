@@ -1,5 +1,7 @@
 package org.rails.controllers;
 
+import org.rails.domain.Result;
+import org.rails.domain.UserProfileService;
 import org.rails.models.FileUploadResponse;
 import org.rails.domain.FileService;
 import org.rails.domain.UserClipService;
@@ -17,10 +19,43 @@ public class FileUploadController {
 
     private final FileService fileService;
     private final UserClipService service;
+    private final UserProfileService userProfileService;
 
-    public FileUploadController(FileService fileService, UserClipService service) {
+    public FileUploadController(FileService fileService, UserClipService service, UserProfileService userProfileService) {
         this.fileService = fileService;
         this.service = service;
+        this.userProfileService = userProfileService;
+    }
+
+    @PostMapping("/profile/picture")
+    public ResponseEntity<FileUploadResponse> uploadProfilePicture(
+            @RequestPart("file") MultipartFile file,
+            @RequestPart("metadata") UploadMetadata metadata) {
+
+        // Handles AWS upload
+        String mediaUrl = fileService.uploadFile(file).getFileUrl();
+
+        // Fetch existing UserProfile
+        int userId = metadata.getUserId();
+        Result<UserProfile> userProfileResult = userProfileService.findById(userId);
+
+        if (!userProfileResult.isSuccess() || userProfileResult.getPayload() == null) {
+            return new ResponseEntity<>(new FileUploadResponse("User not found"), HttpStatus.NOT_FOUND);
+        }
+
+        UserProfile userProfile = userProfileResult.getPayload();
+
+        // Update fields provided in metadata
+        userProfile.setUsername(metadata.getUsername());
+        userProfile.setFirstName(metadata.getFirstName());
+        userProfile.setLastName(metadata.getLastName());
+        userProfile.setCity(metadata.getCity());
+        userProfile.setState(metadata.getState());
+        userProfile.setProfilePicture(mediaUrl);
+
+        Result<UserProfile> updateResult = userProfileService.update(userProfile);
+
+        return new ResponseEntity<>(new FileUploadResponse(mediaUrl), HttpStatus.OK);
     }
 
     @PostMapping("/upload")

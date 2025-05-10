@@ -1,0 +1,50 @@
+@url = http://localhost:8080/api/like
+
+###
+# happy path
+GET {{url}}/1 HTTP/1.1
+
+
+###
+# happy path
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "liker": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "clip": {
+        "clipId": 2,
+        "userProfile": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Tre.mp4",
+    "caption": "Working on consistency, baby steps"
+    }
+}
+
+
+
+###
+# happy path
+DELETE {{url}}/{1} HTTP/1.1

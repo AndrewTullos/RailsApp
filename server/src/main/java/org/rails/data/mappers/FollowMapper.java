@@ -19,6 +19,7 @@ public class FollowMapper implements RowMapper<Follow> {
         follower.setUsername(rs.getString("follower_username"));
         follower.setEmail(rs.getString("follower_email"));
         follower.setPassword(rs.getString("follower_password"));
+        follower.setPassword(null);
         follower.setProfilePicture(rs.getString("follower_profile_picture"));
         follower.setFirstName(rs.getString("follower_first_name"));
         follower.setLastName(rs.getString("follower_last_name"));

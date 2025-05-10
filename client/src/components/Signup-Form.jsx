@@ -68,6 +68,13 @@ export function SignupForm({
 				<p className="text-balance text-sm text-muted-foreground">
 					Enter your email below to register your account
 				</p>
+				{errors.length > 0 && (
+					<div className="text-red-500">
+						{errors.map((error, index) => (
+							<p key={index}>{error}</p>
+						))}
+					</div>
+				)}
 			</div>
 			<div className="grid gap-6">
 				<div className="grid gap-2">

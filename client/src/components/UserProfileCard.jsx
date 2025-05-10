@@ -75,7 +75,7 @@ function UserProfileCard({ loggedInUser, setLoggedInUser }) {
 									{userData.firstName + " " + userData.lastName}
 								</p>
 							</div>
-							<div className="flex gap-4 text-sm">
+							{/* <div className="flex gap-4 text-sm">
 								<div>
 									<span className="font-bold">124</span> posts
 								</div>
@@ -85,20 +85,21 @@ function UserProfileCard({ loggedInUser, setLoggedInUser }) {
 								<div>
 									<span className="font-bold">567</span> following
 								</div>
-							</div>
-							<p className="max-w-md">I skate!</p>
-							{userId != profileId ? (
-								<FollowButton
-									loggedInUser={loggedInUser}
-									setLoggedInUser={setLoggedInUser}
-								/>
-							) : (
-								<Button variant="outline">
-									Settings
-									<span className="sr-only">Settings</span>
-									<Settings className="h-4 w-4" />
-								</Button>
-							)}
+							</div> */}
+							{/* <p className="max-w-md">I skate!</p> */}
+							{
+								userId != profileId ? (
+									<FollowButton
+										loggedInUser={loggedInUser}
+										setLoggedInUser={setLoggedInUser}
+									/>
+								) : null
+								// <Button variant="outline">
+								// 	Settings
+								// 	<span className="sr-only">Settings</span>
+								// 	<Settings className="h-4 w-4" />
+								// </Button>
+							}
 						</div>
 					</div>
 				</div>

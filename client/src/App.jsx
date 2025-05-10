@@ -6,8 +6,9 @@ import NotFoundPage from "./pages/NotFoundPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import DashboardPage from "./pages/DashboardPage";
+import About from "./pages/About";
 import UploadClipPage from "./pages/UploadClipPage";
-
+import SettingsPage from "./pages/SettingsPage";
 import ProfilePage from "./pages/ProfilePage";
 
 // ShadCN
@@ -77,6 +78,18 @@ function App() {
 							path="/profile/:profileId"
 							element={
 								<ProfilePage
+									loggedInUser={loggedInUser}
+									setLoggedInUser={setLoggedInUser}
+								/>
+							}
+						/>
+
+						<Route path="/about" element={<About />} />
+
+						<Route
+							path="/settings/:profileId"
+							element={
+								<SettingsPage
 									loggedInUser={loggedInUser}
 									setLoggedInUser={setLoggedInUser}
 								/>

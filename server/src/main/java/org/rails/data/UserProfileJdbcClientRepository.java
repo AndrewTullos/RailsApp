@@ -19,6 +19,7 @@ public class UserProfileJdbcClientRepository implements UserProfileRepository {
         this.client = client;
     }
 
+
     @Override
     public UserProfile findById(int userId) {
         final String sql = """

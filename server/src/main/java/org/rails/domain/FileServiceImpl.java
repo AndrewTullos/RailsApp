@@ -24,6 +24,7 @@ public class FileServiceImpl implements FileService {
 
     private static final Logger log = LoggerFactory.getLogger(FileServiceImpl.class);
 
+    // AWS S3 bucket details
     @Value("${aws.s3.bucketName}")
     private String bucketName;
 
@@ -35,6 +36,7 @@ public class FileServiceImpl implements FileService {
 
     private AmazonS3 s3Client;
 
+    // Initialize S3 client
     @PostConstruct
     private void initialize() {
         try {
@@ -51,6 +53,7 @@ public class FileServiceImpl implements FileService {
         }
     }
 
+    // Upload file to S3 bucket
     @Override
     public FileUploadResponse uploadFile(MultipartFile multipartFile) {
         if (multipartFile == null || multipartFile.isEmpty()) {
@@ -58,26 +61,36 @@ public class FileServiceImpl implements FileService {
             throw new FileUploadException("No file provided for upload");
         }
 
+        // Prep file path
         FileUploadResponse fileUploadResponse = new FileUploadResponse();
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String todayDate = dateTimeFormatter.format(LocalDate.now());
         String filePath = todayDate + "/" + multipartFile.getOriginalFilename();
 
+        // Upload file to S3
         try {
+
             log.info("Uploading file to S3: bucket={}, path={}", bucketName, filePath);
 
+            // Set file metadata
             ObjectMetadata objectMetadata = new ObjectMetadata();
             objectMetadata.setContentType(multipartFile.getContentType());
             objectMetadata.setContentLength(multipartFile.getSize());
 
+            // Upload file
             s3Client.putObject(bucketName, filePath, multipartFile.getInputStream(), objectMetadata);
+
+            // Generated file URL
             String fileUrl = s3Client.getUrl(bucketName, filePath).toString();
 
+            // Log file upload details
             log.info("File uploaded successfully: {}", fileUrl);
 
+            // Prepare response
             fileUploadResponse.setFilePath(filePath);
             fileUploadResponse.setFileUrl(fileUrl);
             fileUploadResponse.setDateTime(LocalDateTime.now());
+
         } catch (IOException e) {
             log.error("IO Error during upload: {}", e.getMessage(), e);
             throw new FileUploadException("Error occurred in file upload: " + e.getMessage());

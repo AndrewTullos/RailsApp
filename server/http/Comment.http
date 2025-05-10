@@ -1,0 +1,333 @@
+@url = http://localhost:8080/api/comment
+
+###
+# happy path
+GET {{url}}/1 HTTP/1.1
+
+
+###
+# happy path clip 1
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "commenter": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+},
+    "clip": {
+        "clipId": 1,
+        "userProfile": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Tre.mp4",
+    "caption": "Working on consistency, baby steps"
+    },
+    "text": "When are we gonna get session bro?"
+}
+
+###
+# happy path clip 1
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 2,
+    "commenter": {
+        "userId": 1,
+        "username": "RodneyM",
+        "email": "RodneyM@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "",
+        "firstName": "Rodney",
+        "lastName": "Mullen",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+},
+    "clip": {
+        "clipId": 1,
+        "userProfile": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Tre.mp4",
+    "caption": "Working on consistency, baby steps"
+    },
+    "text": "I invented that trick!"
+}
+
+
+###
+# happy path clip 1
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 3,
+    "commenter": {
+        "userId": 9,
+        "username": "LuisSkates",
+        "email": "LuisSkates@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Luis.jpg",
+        "firstName": "Luis",
+        "lastName": "O.",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+},
+    "clip": {
+        "clipId": 1,
+        "userProfile": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Tre.mp4",
+    "caption": "Working on consistency, baby steps"
+    },
+    "text": "So clean man, you skate as good as Drew Tullos!"
+}
+
+###
+# happy path clip 2
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 4,
+    "commenter": {
+        "userId": 9,
+        "username": "LuisSkates",
+        "email": "LuisSkates@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/Luis.jpg",
+        "firstName": "Luis",
+        "lastName": "O.",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+},
+    "clip": {
+        "clipId": 2,
+        "userProfile": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/frontboard.mp4",
+    "caption": "Steezy - Kickflip"
+    },
+    "text": "Dang no shoutout for filming this? I see how it is lol"
+}
+
+
+###
+# happy path clip 3
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 5,
+    "commenter": {
+        "userId": 4,
+        "username": "Scoot2Live",
+        "email": "SparkleKitten@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/photo-1535713875002-d1d0cf377fde-2.jpg",
+        "firstName": "David",
+        "lastName": "Davidson",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+},
+    "clip": {
+        "clipId": 3,
+        "userProfile": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+    },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/angle+2.mp4",
+    "caption": "As above so below"
+    },
+    "text": "DO YOU SCOOTER TOO???"
+}
+
+
+
+###
+# happy path clip 3
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 6,
+    "commenter": {
+        "userId": 4,
+        "username": "Scoot2Live",
+        "email": "SparkleKitten@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/photo-1535713875002-d1d0cf377fde-2.jpg",
+        "firstName": "David",
+        "lastName": "Davidson",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+},
+    "clip": {
+        "clipId": 3,
+        "userProfile": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+        },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/angle+2.mp4",
+    "caption": "As above so below"
+    },
+    "text": "DO YOU SCOOTER TOO???"
+}
+
+###
+# happy path clip 4
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 7,
+    "commenter": {
+        "userId": 4,
+        "username": "Scoot2Live",
+        "email": "SparkleKitten@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/photo-1535713875002-d1d0cf377fde-2.jpg",
+        "firstName": "David",
+        "lastName": "Davidson",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+},
+    "clip": {
+    "clipId": 4,
+        "userProfile": {
+        "userId": 2,
+        "username": "JohnDoe",
+        "email": "JohnDoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/John.jpg",
+        "firstName": "John",
+        "lastName": "Doe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+        },
+    "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/gotit.mp4",
+    "caption": "Cruisn"
+    },
+    "text": "i bet you would be great at scootering!"
+}
+
+
+###
+# happy path clip 7
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 8,
+    "commenter": {
+        "userId": 1,
+        "username": "JoeSchmoe",
+        "email": "JoeSchmoe@Test44.com",
+        "password": "Password44!",
+        "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/babyyoda.jpg",
+        "firstName": "Joe",
+        "lastName": "Schmoe",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "10001"
+},
+    "clip": {
+        "clipId": 7,
+        "userProfile": {
+            "userId": 7,
+            "username": "Johnny",
+            "email": "Johnny@Test44.com",
+            "password": "Password44!",
+            "profilePicture": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/pexels-leonardo-jarro-204864-633432.jpg",
+            "firstName": "Johnny",
+            "lastName": "Rocket",
+            "city": "Nashville",
+            "state": "TN",
+            "postalCode": "10001"
+        },
+        "mediaUrl": "https://rails-app-capstone.s3.us-west-1.amazonaws.com/pop.mp4",
+        "caption": "Got pop like me???!?"
+    },
+    "text": "Sheesh!!"
+}
+
+
+
+
+
+
+
+###
+# happy path
+DELETE {{url}}/{1} HTTP/1.1

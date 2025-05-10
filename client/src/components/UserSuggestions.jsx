@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import getToken from "../functions/getToken";
 import { Link } from "react-router-dom";
+import getToken from "../functions/getToken";
 
 // My Components
 import UserSuggestCard from "./UserSuggestCard";
